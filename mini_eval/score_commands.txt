@@ -1,0 +1,41 @@
+# Voice Arena mini benchmark: exact scoring commands
+# Primary settings: collar 0 ms, overlap INCLUDED, explicit UEM, same scorer for all systems.
+# Run from mini_eval/. RID = recording id (e.g. ami_ES2004a_ihm_0300_0480), SYS = system id.
+
+# 0) Pin the scorer (replace <SHA> with the commit you record in results/system_configs.json)
+git clone https://github.com/nryant/dscore.git third_party/dscore
+git -C third_party/dscore checkout <SHA>
+# Windows only: dscore launches md-eval-22.pl directly, which Windows cannot execute.
+#   python scripts/patch_dscore_windows.py   (rewrites the launch to 'perl md-eval-22.pl'; scoring unchanged)
+python3.10 -m venv .venv-scorer && .venv-scorer/bin/pip install -r requirements-scorer.txt
+
+# 1) Validate RTTMs (dscore's own validator + Voice Arena validator)
+.venv-scorer/bin/python third_party/dscore/validate_rttm.py predictions/SYS/RID.rttm
+python3 scripts/validate_predictions.py
+
+# 2) DER + JER per recording (dscore)
+.venv-scorer/bin/python third_party/dscore/score.py --collar 0.0 \
+    -u reference/RID.uem -r reference/RID.rttm -s predictions/SYS/RID.rttm \
+    --n_digits 4
+
+# 3) DER components in seconds (md-eval bundled in the same dscore checkout; overlap included)
+perl third_party/dscore/scorelib/md-eval-22.pl -c 0.0 \
+    -r reference/RID.rttm -s predictions/SYS/RID.rttm -u reference/RID.uem
+
+# 4) Non-overlap DER (single-speaker regions only; same flag dscore uses for --ignore_overlaps)
+perl third_party/dscore/scorelib/md-eval-22.pl -c 0.0 -1 \
+    -r reference/RID.rttm -s predictions/SYS/RID.rttm -u reference/RID.uem
+
+# 5) Diagnostic only, never the headline: 250 ms collar
+perl third_party/dscore/scorelib/md-eval-22.pl -c 0.25 \
+    -r reference/RID.rttm -s predictions/SYS/RID.rttm -u reference/RID.uem
+
+# 6) Everything above, for every system and recording, plus overlap-region DER
+#    (UEM restricted to reference regions with >= 2 speakers), failure policy and tables:
+DSCORE_PYTHON=.venv-scorer/bin/python python3 scripts/score.py --diagnostics
+python3 scripts/bootstrap.py        # prints insufficient_sample for n=10 (by design)
+python3 scripts/make_results.py
+python3 scripts/export_dashboard.py
+
+# Note: score.py feeds the scorer a normalized copy of each prediction in which
+# same-speaker overlapping segments are merged (the only normalization applied).

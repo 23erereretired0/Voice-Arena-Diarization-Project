@@ -1,0 +1,83 @@
+{
+  "sandbox_this_submission": {
+    "captured_utc": "2026-10-14T21:14:51+00:00",
+    "os": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "python_executable": "/usr/bin/python3",
+    "cpu": "x86_64",
+    "gpu": "none detected",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.2",
+      "requests": "2.33.1",
+      "torch": "not installed",
+      "torchaudio": "not installed",
+      "pyannote.audio": "not installed",
+      "pyannote.core": "not installed",
+      "pyannote.metrics": "not installed",
+      "nemo": "not installed",
+      "omegaconf": "not installed",
+      "huggingface_hub": "not installed",
+      "intervaltree": "not installed",
+      "tabulate": "0.10.0"
+    },
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "perl": "v5.38.2",
+    "dscore_commit": "dscore not cloned"
+  },
+  "sandbox_2026-10-18": {
+    "captured_utc": "2026-10-18T15:18:17+00:00",
+    "os": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "python_executable": "/usr/bin/python3",
+    "cpu": "x86_64",
+    "gpu": "none detected",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.2",
+      "requests": "2.33.1",
+      "torch": "not installed",
+      "torchaudio": "not installed",
+      "pyannote.audio": "not installed",
+      "pyannote.core": "not installed",
+      "pyannote.metrics": "not installed",
+      "nemo": "not installed",
+      "omegaconf": "not installed",
+      "huggingface_hub": "not installed",
+      "intervaltree": "not installed",
+      "tabulate": "0.10.0"
+    },
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "perl": "v5.38.2",
+    "dscore_commit": "dscore not cloned"
+  },
+  "windows": {
+    "captured_utc": "2026-10-18T19:28:20+00:00",
+    "os": "Windows-10-10.0.26100-SP0",
+    "python": "3.11.9",
+    "python_executable": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\.venv\\Scripts\\python.exe",
+    "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 566.07",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "not installed",
+      "pandas": "not installed",
+      "requests": "2.34.2",
+      "torch": "not installed",
+      "torchaudio": "not installed",
+      "pyannote.audio": "not installed",
+      "pyannote.core": "not installed",
+      "pyannote.metrics": "not installed",
+      "nemo": "not installed",
+      "omegaconf": "not installed",
+      "huggingface_hub": "not installed",
+      "intervaltree": "not installed",
+      "tabulate": "not installed"
+    },
+    "ffmpeg": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "perl": "v5.42.3",
+    "dscore_commit": "e02f949ac6592279300a2c33d03daf9e0c12fd27"
+  }
+}

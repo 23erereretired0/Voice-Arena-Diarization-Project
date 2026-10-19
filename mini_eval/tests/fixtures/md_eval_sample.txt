@@ -1,0 +1,44 @@
+command line (run on 2026 Oct 15 at 10:00:00):  md-eval-22.pl -c 0 -r ref.rttm -s sys.rttm -u all.uem
+
+Time-based metadata alignment
+
+Metadata evaluation parameters:
+    time-optimized metadata mapping
+        max gap between matching metadata events = 1 sec
+        max extent to match for SU's = 0.5 sec
+
+Speaker Diarization evaluation parameters:
+    The max time to extend no-score zones for NON-LEX exclusions is 0.5 sec
+    The no-score collar at SPEAKER boundaries is 0 sec
+
+Exclusion zones for evaluation and scoring are:
+                             -----MetaData-----        -----SpkrData-----
+     exclusion set name:     DEFAULT    DEFAULT        DEFAULT    DEFAULT
+     token type/subtype      no-eval   no-score        no-eval   no-score
+             (UEM)              X                         X
+
+*** Performance analysis for Speaker Diarization for c=1 f=rec1 ***
+
+ EVAL TIME =    300.00 secs
+EVAL SPEECH =    250.00 secs ( 83.3 percent of evaluated time)
+SCORED TIME =    300.00 secs (100.0 percent of evaluated time)
+SCORED SPEECH =    250.00 secs ( 83.3 percent of scored time)
+---------------------------------------------
+SCORED SPEAKER TIME =280.000000 secs (112.0 percent of scored speech)
+MISSED SPEAKER TIME =     20.00 secs (  7.1 percent of scored speaker time)
+FALARM SPEAKER TIME =     14.00 secs (  5.0 percent of scored speaker time)
+ SPEAKER ERROR TIME =     21.00 secs (  7.5 percent of scored speaker time)
+---------------------------------------------
+ OVERALL SPEAKER DIARIZATION ERROR = 19.64 percent of scored speaker time  `(c=1 f=rec1)
+---------------------------------------------
+
+*** Performance analysis for Speaker Diarization for ALL ***
+
+ EVAL TIME =    300.00 secs
+SCORED SPEAKER TIME =280.000000 secs (112.0 percent of scored speech)
+MISSED SPEAKER TIME =     20.00 secs (  7.1 percent of scored speaker time)
+FALARM SPEAKER TIME =     14.00 secs (  5.0 percent of scored speaker time)
+ SPEAKER ERROR TIME =     21.00 secs (  7.5 percent of scored speaker time)
+---------------------------------------------
+ OVERALL SPEAKER DIARIZATION ERROR = 19.64 percent of scored speaker time  `(ALL)
+---------------------------------------------

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voice Arena · Speaker Diarization Benchmark</title>
+<style>
+:root{--bg:#000;--panel:#0d0d0f;--line:#26262b;--ink:#f2f2f3;--muted:#a1a1aa;--accent:#e4e4e7;--warn:#fbbf24;--bad:#f87171;--ok:#86efac;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--font);font-variant-numeric:tabular-nums}
+.wrap{max-width:1100px;margin:0 auto;padding:18px 16px 60px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button,select,input{font:inherit;color:inherit}
+.btn{background:transparent;border:1px solid #3f3f46;border-radius:999px;padding:8px 16px;cursor:pointer;font-weight:600}
+.btn:hover{background:#18181b}
+.btn.small{padding:5px 12px;font-weight:500;font-size:14px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.link{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;cursor:pointer}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:14px;align-items:center;flex:1;min-width:0}
+.brand svg{flex:none}
+.actions.top{flex-wrap:nowrap}
+.brand h1{margin:0;font-size:20px}
+.meta{color:var(--muted);font-size:13.5px}
+.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+section{margin-top:26px}
+h2{font-size:18px;margin:0}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tag{font-size:13px;color:var(--muted)}
+.tag.warn{color:var(--warn)} .tag.ok{color:var(--ok)}
+.note{color:var(--muted);margin:8px 0 12px}
+.scroll{overflow-x:auto;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+th{font-weight:600}
+td.num,th.num{text-align:right}
+th button.h{background:none;border:0;padding:0;font-weight:600;cursor:help;border-bottom:1px dotted var(--muted)}
+.dash{color:var(--muted)}
+.details td{white-space:normal;background:var(--panel);color:var(--muted);font-size:13.5px}
+.details dl{display:grid;grid-template-columns:max-content 1fr;gap:3px 14px;margin:0}
+.details dt{color:var(--ink)}
+.panel{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--panel);margin-top:12px}
+.panel[hidden]{display:none}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.filters label{display:flex;flex-direction:column;font-size:13px;color:var(--muted);gap:4px}
+select,input[type=file]{background:#111113;border:1px solid #3f3f46;border-radius:8px;padding:6px 8px;max-width:100%}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{border:1px solid #3f3f46;border-radius:999px;padding:2px 10px;font-size:13px}
+.warnbox{border-left:3px solid var(--warn);padding:8px 12px;background:#17140a;color:#fde68a;margin:10px 0}
+.errbox{border-left:3px solid var(--bad);padding:8px 12px;background:#1a0d0d;color:#fecaca;margin:10px 0}
+ul.st{padding-left:18px;margin:8px 0}
+ul.st li{margin-bottom:6px}
+.basis{font-size:12px;border:1px solid #3f3f46;border-radius:4px;padding:0 5px;margin-right:6px;color:var(--muted)}
+.basis.h{color:var(--warn);border-color:#78350f}
+.basis.i{color:var(--ok);border-color:#14532d}
+.tl{position:relative;height:16px;background:#111113;border-radius:3px;margin:3px 0 8px}
+.tl i{position:absolute;top:2px;height:12px;border-radius:2px;opacity:.9}
+.tl-label{font-size:12.5px;color:var(--muted)}
+.upload-head{display:flex;gap:12px;align-items:flex-start}
+.seg-time{background:none;border:0;color:var(--accent);text-decoration:underline;cursor:pointer;padding:0}
+#tip{position:fixed;z-index:50;max-width:340px;background:#18181b;border:1px solid #3f3f46;border-radius:8px;padding:10px 12px;font-size:13px;line-height:1.45;box-shadow:0 8px 24px rgba(0,0,0,.6)}
+#tip[hidden]{display:none}
+#tip b{display:block;margin-bottom:2px}
+#tip code{color:#e4e4e7}
+footer{margin-top:40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:600px){.actions{width:100%}.actions .btn{flex:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><g fill="#f2f2f3"><rect x="2" y="10" width="2" height="6" rx="1"/><rect x="6" y="6" width="2" height="14" rx="1"/><rect x="10" y="3" width="2" height="20" rx="1"/><rect x="14" y="7" width="2" height="12" rx="1"/><rect x="18" y="5" width="2" height="16" rx="1"/><rect x="22" y="10" width="2" height="6" rx="1"/></g></svg>
+    <div><h1>Voice Arena</h1><div class="meta" id="meta">Speaker diarization benchmark</div></div>
+  </div>
+  <div class="actions top">
+    <button class="btn small" type="button" id="uploadJump">Upload Audio</button>
+    <button class="btn" type="button" id="customizeBtn" aria-expanded="false" aria-controls="filterPanel">Customize Ranking</button>
+  </div>
+</header>
+
+<div class="panel" id="filterPanel" hidden>
+  <div class="filters">
+    <label>Recording type<select data-f="recording_type"><option value="all">All</option><option value="telephone">Telephone</option><option value="meeting">Meeting</option><option value="informal">Informal conversation</option><option value="interview/media">Interview / media</option></select></label>
+    <label>Number of speakers<select data-f="n_speakers"><option value="all">All</option><option value="2">2 speakers</option><option value="3-5">3–5 speakers</option><option value="6+">6+ speakers</option></select></label>
+    <label>Overlap level<select data-f="overlap_level"><option value="all">All</option><option value="low">Low overlap</option><option value="high">High overlap</option></select></label>
+    <label>Audio quality<select data-f="audio_quality"><option value="all">All</option><option value="clean">Clean</option><option value="noisy">Noisy / muffled</option></select></label>
+    <label>Microphone distance<select data-f="mic_distance"><option value="all">All</option><option value="close-talk">Close-talk</option><option value="far-field">Far-field</option></select></label>
+  </div>
+  <p class="note" style="margin-bottom:8px">Recordings whose condition is unknown only appear under “All”. Low overlap &lt; 5 %, high ≥ 15 % of speech.</p>
+  <div class="actions"><button class="btn small" type="button" id="applyBtn">Apply filters</button><button class="btn small" type="button" id="resetBtn">Reset filters</button></div>
+</div>
+
+<section aria-labelledby="custTitle" id="customSection" hidden>
+  <div class="row"><h2 id="custTitle">Customized ranking</h2><button class="link" type="button" id="backBtn">Back to overall ranking</button></div>
+  <div class="chips" id="chips"></div>
+  <div id="custHost"></div>
+</section>
+
+<section aria-labelledby="lbTitle">
+  <div class="row"><h2 id="lbTitle">Overall leaderboard</h2><span class="tag" id="statusTag"></span></div>
+  <p class="note" id="statusNote"></p>
+  <div id="lbHost"></div>
+</section>
+
+<section aria-labelledby="recTitle">
+  <div class="row"><h2 id="recTitle">Recordings</h2><span class="tag" id="recCount"></span></div>
+  <p class="note">Select a recording to see what happened in it.</p>
+  <div class="scroll"><table id="recTable"></table></div>
+  <div class="panel" id="recPanel">
+    <h2 style="font-size:16px">What happened in this recording?</h2>
+    <div id="recDetail"></div>
+  </div>
+</section>
+
+<section aria-labelledby="upTitle" id="upload">
+  <div class="upload-head">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="margin-top:3px"><path d="M12 16V4m0 0l-5 5m5-5l5 5M4 20h16" stroke="#f2f2f3" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    <div><h2 id="upTitle">Evaluate your own audio</h2>
+      <p class="note" style="margin-top:2px">Upload a recording for diarization. Add reference annotations if you want objective scoring. Your audio is processed by the local Voice Arena server only, deleted after processing, and never added to the benchmark.</p></div>
+  </div>
+  <div class="panel">
+    <label class="tag" for="audioFile">Audio file (WAV, FLAC, MP3, M4A, OGG, WebM)</label><br>
+    <input type="file" id="audioFile" accept="audio/*,.wav,.flac,.mp3,.m4a,.ogg,.opus,.webm">
+    <div id="fileInfo" class="note"></div>
+    <audio id="player" controls hidden style="width:100%;max-width:520px"></audio>
+    <div class="actions" style="margin-top:10px">
+      <label class="tag" for="sysSel">System</label>
+      <select id="sysSel"><option value="pyannote-community-1">pyannote Community-1</option></select>
+      <button class="btn small" type="button" id="runBtn" disabled>Run diarization</button>
+    </div>
+    <div id="runStatus" class="note" role="status" aria-live="polite"></div>
+    <div id="runResult"></div>
+  </div>
+</section>
+
+<footer>Voice Arena · Scores use strict DER (0 ms collar, overlap included, no speaker count given) from one pinned scorer. Read the <a href="../docs/methodology.md">methodology</a> and the <a href="../docs/benchmark_report.md">benchmark report</a>.</footer>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+
+<script src="aggregate.js"></script>
+<script src="data/benchmark_results.js"></script>
+<script>
+(function () {
+  "use strict";
+  var B = window.VA_BENCHMARK, A = window.VAAggregate;
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var has = function (x) { return x !== null && x !== undefined && !(typeof x === "number" && isNaN(x)); };
+  var DASH = '<span class="dash">—</span>';
+  var f = function (x, d, u) { return has(x) ? Number(x).toFixed(d == null ? 1 : d) + (u || "") : DASH; };
+  var SPK = ["#60a5fa", "#fbbf24", "#34d399", "#f472b6", "#a78bfa", "#f87171", "#22d3ee", "#a3e635"];
+
+  if (!B || !A) {
+    document.querySelector(".wrap").insertAdjacentHTML("afterbegin", '<div class="errbox">Benchmark data could not be loaded (dashboard/data/benchmark_results.js or aggregate.js is missing). Keep the dashboard folder intact. No scores are shown.</div>');
+    B = { status: "missing", systems: [], recordings: [], recording_summaries: [], cross_recording: [], n_recordings: 0 };
+    A = A || { rank: function () { return []; }, filterRecordings: function (r) { return r; }, evidence: function () { return { sufficient: false, reason: "No data", n_matching: 0, duration_s: 0 }; } };
+  }
+  var SYS = B.systems || [], RECS = B.recordings || [];
+  var NAMES = {}; SYS.forEach(function (s) { NAMES[s.system_id] = s.name; });
+  var SIDS = SYS.map(function (s) { return s.system_id; });
+  var measured = B.status === "measured" || B.status === "partial";
+
+  // ---------------- metric tooltips ----------------
+  var PROTO = " DER and its components depend on the scoring protocol: here 0 ms collar, overlap included, UEM = whole excerpt.";
+  var M = {
+    rank: ["Rank", "Order by pooled DER within this table. Provisional: 10 recordings cannot establish a general winner.", "1 = lowest pooled DER", "—", "Lower rank number is better", "Not a statistical ranking."],
+    der: ["Pooled diarization error rate (strict DER)", "Share of reference speaker time that was missed, falsely detected, or given to the wrong speaker, summed over all recordings.", "DER = (missed + false-alarm + speaker-confusion time) / reference speaker time × 100 %", "%", "Lower is better", "Can exceed 100 % because false alarms are unbounded." + PROTO],
+    ci: ["95 % confidence interval", "Paired recording-level bootstrap interval of pooled DER.", "10,000 resamples of recordings, seed 20261015, percentile interval", "% (DER points)", "Narrower is more certain", "Not reported below 20 recordings (methodology §10.4)."],
+    macro: ["Macro DER", "Average of the per-recording DERs; every recording counts equally.", "Macro DER = mean over recordings of DER_r", "%", "Lower is better", "Short recordings weigh as much as long ones." + PROTO],
+    median: ["Median DER", "The middle per-recording DER.", "median over recordings of DER_r", "%", "Lower is better", "Ignores how bad the worst recordings are."],
+    jer: ["Jaccard error rate (JER)", "Per-speaker mismatch averaged over speakers, so quiet speakers count as much as dominant ones.", "JER = mean over reference speakers of (1 − intersection / union) after optimal speaker-label matching × 100 %", "%", "Lower is better", "Averaged over recordings here; computed by dscore without a collar."],
+    miss: ["Missed speech", "Reference speaker time the system did not output.", "missed speaker time / reference speaker time × 100 %", "%", "Lower is better", "Word-level STT systems cannot output overlap, which raises this." + PROTO],
+    fa: ["False alarm", "Speaker time output by the system where the reference has no (or fewer) speakers.", "false-alarm speaker time / reference speaker time × 100 %", "%", "Lower is better", PROTO.trim()],
+    conf: ["Speaker confusion", "Detected speech assigned to the wrong speaker after optimal mapping.", "confusion time / reference speaker time × 100 %", "%", "Lower is better", PROTO.trim()],
+    ovl: ["Overlap DER", "DER restricted to regions where the reference has two or more speakers.", "DER computed on overlap regions only", "%", "Lower is better", "Based on little data when recordings contain little overlap."],
+    nov: ["Non-overlap DER", "DER on regions with a single reference speaker.", "DER computed on single-speaker regions only (md-eval -1)", "%", "Lower is better", PROTO.trim()],
+    mae: ["Speaker-count MAE", "How far the number of speakers found is from the true number.", "Speaker-count MAE = mean |predicted − reference speakers|", "speakers", "Lower is better", "A failed recording counts as 0 speakers predicted."],
+    bmed: ["Boundary error (median)", "Typical distance from a reference turn boundary to the nearest predicted boundary.", "median over all reference boundaries of min |t_ref − t_sys| (capped at 5 s, speaker ignored)", "seconds", "Lower is better", "Proposed diagnostic, not a standard metric."],
+    bp95: ["Boundary error (95th percentile)", "Large boundary misses: 95 % of boundaries are within this distance.", "95th percentile of the same distances", "seconds", "Lower is better", "Proposed diagnostic, not a standard metric."],
+    rt: ["Runtime", "Total inference time over the scored recordings, excluding model loading.", "Σ inference seconds", "seconds", "Lower is better", "API runtime is end-to-end including network. Hardware differs between systems."],
+    rtf: ["Real-time factor (RTF)", "How long processing takes relative to audio length.", "RTF = inference runtime (s) / audio duration (s)", "ratio", "Lower is better", "0.1 means 10× faster than real time; depends on hardware."],
+    cost: ["Cost per audio hour", "Price of processing one hour of audio.", "list price or instance cost / audio hours", "USD / hour", "Lower is better", "Not reported: no documented price inputs were recorded for this run."],
+    fail: ["Failure rate", "Recordings where the run failed, timed out or produced invalid output.", "Failure rate = failed recording attempts / total recording attempts × 100 %", "%", "Lower is better", "Failed recordings are scored as 100 % missed speech, never dropped."],
+    n: ["Recordings scored", "Number of recordings with a scored prediction (including failures scored as empty).", "count", "recordings", "More is more reliable", "10 is exploratory; methodology requires ≥ 20 for intervals."]
+  };
+  function th(key, label, cls) { return '<th scope="col"' + (cls ? ' class="' + cls + '"' : "") + '><button type="button" class="h" data-m="' + key + '">' + label + "</button></th>"; }
+  var tip = $("#tip"), tipFor = null;
+  function showTip(el) {
+    var m = M[el.getAttribute("data-m")]; if (!m) return;
+    tip.innerHTML = "<b>" + esc(m[0]) + "</b>" + esc(m[1]) + "<br><code>" + esc(m[2]) + "</code><br>Units: " + esc(m[3]) + " · " + esc(m[4]) + "<br><i>" + esc(m[5]) + "</i>";
+    tip.hidden = false; tipFor = el; el.setAttribute("aria-describedby", "tip");
+    var r = el.getBoundingClientRect(), w = Math.min(340, innerWidth - 16);
+    tip.style.maxWidth = w + "px";
+    tip.style.left = Math.max(8, Math.min(r.left, innerWidth - tip.offsetWidth - 8)) + "px";
+    var top = r.bottom + 6; if (top + tip.offsetHeight > innerHeight - 8) top = Math.max(8, r.top - tip.offsetHeight - 6);
+    tip.style.top = top + "px";
+  }
+  function hideTip() { tip.hidden = true; if (tipFor) tipFor.removeAttribute("aria-describedby"); tipFor = null; }
+  document.addEventListener("mouseover", function (e) { var b = e.target.closest && e.target.closest("[data-m]"); if (b) showTip(b); });
+  document.addEventListener("mouseout", function (e) { var b = e.target.closest && e.target.closest("[data-m]"); if (b && document.activeElement !== b) hideTip(); });
+  document.addEventListener("focusin", function (e) { var b = e.target.closest && e.target.closest("[data-m]"); if (b) showTip(b); else hideTip(); });
+  // tap/click always opens (focus may already have opened it); tapping elsewhere or Escape closes
+  document.addEventListener("click", function (e) { var b = e.target.closest && e.target.closest("[data-m]"); if (b) showTip(b); else if (!e.target.closest("#tip")) hideTip(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  addEventListener("scroll", function () { if (tipFor && document.activeElement === tipFor) showTip(tipFor); else hideTip(); }, true);
+
+  // ---------------- header ----------------
+  var statusLabel = { measured: "Measured · provisional", partial: "Partially measured · provisional", not_run: "Not run · no measured scores", missing: "No data" }[B.status] || B.status;
+  $("#meta").textContent = "Speaker diarization benchmark · " + (B.n_recordings || RECS.length) + " recordings · " + statusLabel +
+    " · Last evaluated: " + (B.evaluated_utc ? B.evaluated_utc.slice(0, 10) : "never");
+  $("#meta").title = B.dataset_version || "";
+  $("#statusTag").textContent = statusLabel;
+  $("#statusTag").className = "tag " + (measured ? "ok" : "warn");
+  $("#statusNote").textContent = (B.status_note || "") + (measured ? " Rankings use pooled DER over " + RECS.length + " recordings, below the 20 needed for confidence intervals." : " The table shows the evaluated systems with no values until the benchmark runs.");
+
+  // ---------------- leaderboard table ----------------
+  var COLS = [["der", "DER ↓", "num", function (a) { return f(a.pooled_der); }],
+    ["ci", "95% CI", "", function (a) { return a.n_scored ? '<span class="dash">not reported (n=' + a.n_scored + " &lt; 20)</span>" : DASH; }],
+    ["macro", "Macro ↓", "num", function (a) { return f(a.macro_der); }], ["median", "Median ↓", "num", function (a) { return f(a.median_der); }],
+    ["jer", "JER ↓", "num", function (a) { return f(a.jer); }], ["miss", "Missed ↓", "num", function (a) { return f(a.missed); }],
+    ["fa", "False alarm ↓", "num", function (a) { return f(a.false_alarm); }], ["conf", "Confusion ↓", "num", function (a) { return f(a.confusion); }],
+    ["ovl", "Overlap DER ↓", "num", function (a) { return f(a.overlap_der); }], ["nov", "Non-overlap ↓", "num", function (a) { return f(a.non_overlap_der); }],
+    ["mae", "Spk MAE ↓", "num", function (a) { return f(a.speaker_mae, 2); }], ["bmed", "Bnd med ↓", "num", function (a) { return f(a.boundary_median, 2, " s"); }],
+    ["bp95", "Bnd p95 ↓", "num", function (a) { return f(a.boundary_p95, 2, " s"); }], ["rt", "Runtime ↓", "num", function (a) { return f(a.runtime_s, 1, " s"); }],
+    ["rtf", "RTF ↓", "num", function (a) { return f(a.rtf, 3); }], ["cost", "Cost/h ↓", "num", function () { return '<span class="dash" title="No documented price inputs">n/a</span>'; }],
+    ["fail", "Failures ↓", "num", function (a) { return has(a.failure_rate) ? a.failure_rate.toFixed(0) + " % (" + a.n_failed + ")" : DASH; }],
+    ["n", "Recs", "num", function (a) { return a.n_scored + "/" + a.n_recordings; }]];
+
+  function sysStatus(sid) {
+    var st = SYS.filter(function (s) { return s.system_id === sid; })[0] || {};
+    return st.blocked_reason ? "Not run" : "";
+  }
+  function table(recs, id) {
+    var aggs = A.rank(recs, SIDS);
+    var h = '<div class="scroll"><table id="' + id + '"><thead><tr>' + th("rank", "Rank / System") + COLS.map(function (c) { return th(c[0], c[1], c[2]); }).join("") + "<th></th></tr></thead><tbody>";
+    aggs.forEach(function (a) {
+      var nr = !has(a.pooled_der);
+      h += "<tr><td>" + (a.rank ? a.rank + ". " : "") + esc(NAMES[a.system_id] || a.system_id) + (nr ? ' <span class="dash">· ' + (sysStatus(a.system_id) || "no score") + "</span>" : "") + "</td>" +
+        COLS.map(function (c) { return '<td class="' + c[2] + '">' + c[3](a) + "</td>"; }).join("") +
+        '<td><button class="link" type="button" data-details="' + id + ":" + a.system_id + '" aria-expanded="false">Details</button></td></tr>' +
+        '<tr class="details" id="d-' + id + "-" + a.system_id + '" hidden><td colspan="' + (COLS.length + 2) + '">' + details(a.system_id) + "</td></tr>";
+    });
+    return h + "</tbody></table></div>";
+  }
+  function details(sid) {
+    var s = SYS.filter(function (x) { return x.system_id === sid; })[0] || {};
+    var pk = s.package_versions ? Object.keys(s.package_versions).map(function (k) { return k + " " + s.package_versions[k]; }).join(", ") : "not recorded (not run)";
+    var hw = s.hardware ? Object.keys(s.hardware).map(function (k) { return k + ": " + s.hardware[k]; }).join(", ") : "not recorded (not run)";
+    var sc = B.scoring || {};
+    return "<dl><dt>Model</dt><dd>" + esc(s.declared_model) + "</dd><dt>Model revision</dt><dd>" + esc(s.model_revision || "not recorded (not run)") +
+      "</dd><dt>Deployment</dt><dd>" + esc(s.deployment) + " · " + esc(s.mode) + " · track " + esc(s.track) + "</dd><dt>Speaker count given</dt><dd>" + esc(s.speaker_count_condition) +
+      "</dd><dt>Packages</dt><dd>" + esc(pk) + "</dd><dt>Hardware</dt><dd>" + esc(hw) + "</dd><dt>Evaluated</dt><dd>" + esc(s.run_finished_utc && !s.blocked_reason ? s.run_finished_utc : "not evaluated") +
+      "</dd><dt>Model load time</dt><dd>" + (has(s.model_load_seconds) ? s.model_load_seconds + " s (excluded from runtime)" : "—") +
+      "</dd><dt>Scoring</dt><dd>collar " + esc(sc.collar_s) + " s · overlap " + esc(sc.overlap) + " · scorer " + esc((B.scorer && (B.scorer.commit || B.scorer.name)) || "dscore (not run)") +
+      "</dd><dt>Configuration</dt><dd>" + esc(JSON.stringify(s.settings || {})) + "</dd>" + (s.blocked_reason ? "<dt>Blocked</dt><dd>" + esc(s.blocked_reason) + "</dd>" : "") + "</dl>";
+  }
+  function wireDetails(host) {
+    host.querySelectorAll("[data-details]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var p = b.getAttribute("data-details").split(":"), row = document.getElementById("d-" + p[0] + "-" + p[1]);
+        row.hidden = !row.hidden; b.setAttribute("aria-expanded", String(!row.hidden)); b.textContent = row.hidden ? "Details" : "Hide";
+      });
+    });
+  }
+  $("#lbHost").innerHTML = SIDS.length ? table(RECS, "overall") : '<div class="errbox">No systems in the data file.</div>';
+  wireDetails($("#lbHost"));
+
+  // ---------------- customize ranking ----------------
+  var LABEL = { recording_type: "Recording type", n_speakers: "Speakers", overlap_level: "Overlap", audio_quality: "Audio quality", mic_distance: "Microphone" };
+  function current() { var o = {}; document.querySelectorAll("[data-f]").forEach(function (s) { o[s.getAttribute("data-f")] = s.value; }); return o; }
+  $("#customizeBtn").addEventListener("click", function () {
+    var p = $("#filterPanel"); p.hidden = !p.hidden; this.setAttribute("aria-expanded", String(!p.hidden));
+    if (!p.hidden) p.querySelector("select").focus();
+  });
+  function applyFilters() {
+    var fl = current(), active = Object.keys(fl).filter(function (k) { return fl[k] !== "all"; });
+    if (!active.length) { $("#customSection").hidden = true; return; }
+    var recs = A.filterRecordings(RECS, fl), ev = A.evidence(recs, SIDS);
+    $("#chips").innerHTML = active.map(function (k) { return '<span class="chip">' + esc(LABEL[k]) + ": " + esc(document.querySelector('[data-f="' + k + '"]').selectedOptions[0].textContent) + "</span>"; }).join("") +
+      '<span class="chip">' + ev.n_matching + " matching recording(s) · " + (ev.duration_s === null ? "duration not yet measured" : (ev.duration_s / 60).toFixed(1) + " min") + "</span>";
+    var h = "";
+    if (!measured) h += '<div class="warnbox">No measured results yet, so nothing can be ranked. Matching recordings are counted from the planned manifest.</div>';
+    if (!ev.sufficient) h += '<div class="warnbox"><b>Insufficient evidence for a reliable comparison.</b> ' + esc(ev.reason) + "</div>";
+    else h += '<p class="note">Exploratory ranking recomputed from the ' + ev.n_scored + " matching recordings only. The overall leaderboard below is unchanged.</p>" + table(recs, "custom");
+    $("#custHost").innerHTML = h; wireDetails($("#custHost"));
+    $("#customSection").hidden = false; $("#customSection").scrollIntoView({ block: "start" });
+  }
+  $("#applyBtn").addEventListener("click", applyFilters);
+  function reset() { document.querySelectorAll("[data-f]").forEach(function (s) { s.value = "all"; }); $("#customSection").hidden = true; }
+  $("#resetBtn").addEventListener("click", reset);
+  $("#backBtn").addEventListener("click", function () { reset(); $("#lbTitle").scrollIntoView({ block: "start" }); });
+
+  // ---------------- recordings ----------------
+  var SUM = {}; (B.recording_summaries || []).forEach(function (s) { SUM[s.recording_id] = s; });
+  var TAGTXT = function (t) { return ["recording_type", "n_speakers", "overlap_level", "audio_quality", "mic_distance"].map(function (k) { return (t || {})[k] || "unknown"; }).join(" · "); };
+  $("#recCount").textContent = RECS.length + " recordings" + (RECS.length && !RECS[0].prepared ? " (planned, not yet prepared)" : "");
+  var rh = '<thead><tr><th scope="col">Recording</th><th scope="col">Dataset</th><th class="num" scope="col">Duration</th><th class="num" scope="col">Speakers</th><th scope="col">Conditions (type · speakers · overlap · quality · mic)</th>' +
+    SIDS.map(function (s) { return '<th class="num" scope="col">' + esc(NAMES[s]) + " DER</th>"; }).join("") + "</tr></thead><tbody>";
+  RECS.forEach(function (r) {
+    rh += '<tr><td><button class="link" type="button" data-rec="' + esc(r.recording_id) + '">' + esc(r.recording_id) + "</button></td><td>" + esc(r.source) + '</td><td class="num">' + f(r.duration_s, 0, " s") +
+      '</td><td class="num">' + (has(r.n_reference_speakers) ? r.n_reference_speakers : DASH) + "</td><td>" + esc(TAGTXT(r.tags)) + "</td>" +
+      SIDS.map(function (s) { var x = r.results[s] || {}; return '<td class="num">' + (x.failed ? "failed" : f(x.DER)) + "</td>"; }).join("") + "</tr>";
+  });
+  $("#recTable").innerHTML = rh + "</tbody>";
+  function timeline(segs, dur, label) {
+    if (!segs || !dur) return "";
+    var spk = {}, n = 0;
+    return '<div class="tl-label">' + esc(label) + '</div><div class="tl" role="img" aria-label="' + esc(label) + ' speaker timeline">' + segs.map(function (s) {
+      if (!(s[2] in spk)) spk[s[2]] = SPK[n++ % SPK.length];
+      return '<i title="' + esc(s[2] + " " + s[0] + "–" + s[1] + " s") + '" style="left:' + (100 * s[0] / dur) + "%;width:" + Math.max(0.2, 100 * (s[1] - s[0]) / dur) + "%;background:" + spk[s[2]] + '"></i>';
+    }).join("") + "</div>";
+  }
+  function showRec(id) {
+    var r = RECS.filter(function (x) { return x.recording_id === id; })[0];
+    var s = SUM[id], h = "<p class=\"note\"><b>" + esc(r.recording_id) + "</b> · " + esc(r.source) + " · " + esc(r.dataset_version || "") + " · window " + esc((r.excerpt || []).join("–")) + " s · licence: " + esc(r.license) + "</p>";
+    h += "<p class=\"note\">Conditions: " + Object.keys(r.tags || {}).map(function (k) { return esc(k) + " = " + esc(r.tags[k]) + (r.tag_evidence && r.tag_evidence[k] ? ' <span class="dash">(' + esc(r.tag_evidence[k]) + ")</span>" : ""); }).join("; ") + "</p>";
+    if (!s) {
+      h += '<div class="warnbox">No measured result for this recording yet. Summaries are generated by <code>mini_eval/scripts/analyze.py</code> from scored predictions after the benchmark runs; nothing is written in advance.</div>';
+    } else {
+      h += '<div class="scroll"><table><thead><tr><th>System</th>' + th("der", "DER", "num") + th("jer", "JER", "num") + th("miss", "Missed", "num") + th("fa", "False alarm", "num") + th("conf", "Confusion", "num") + th("rt", "Runtime", "num") + "<th>Status</th></tr></thead><tbody>" +
+        SIDS.map(function (sid) {
+          var x = r.results[sid] || {}, c = x.components, p = function (k) { return c && c.scored_speaker_s ? f(100 * c[k] / c.scored_speaker_s) : DASH; };
+          return "<tr><td>" + esc(NAMES[sid]) + '</td><td class="num">' + f(x.DER) + '</td><td class="num">' + f(x.JER) + '</td><td class="num">' + p("missed_speaker_s") + '</td><td class="num">' + p("false_alarm_speaker_s") + '</td><td class="num">' + p("speaker_error_s") +
+            '</td><td class="num">' + f(x.processing_seconds, 1, " s") + "</td><td>" + esc(x.failed ? "failed (scored as empty)" : x.score_status) + "</td></tr>";
+        }).join("") + "</tbody></table></div>";
+      if (s.main_error_category) h += "<p>Main error category across systems: <b>" + esc(s.main_error_category) + "</b>.</p>";
+      h += '<ul class="st">' + s.statements.map(function (x) { return '<li><span class="basis' + (x.basis === "hypothesis" ? " h" : (x.basis === "inspection" ? " i" : "")) + '">' + esc(x.basis) + "</span>" + esc(x.text) + "</li>"; }).join("") + "</ul>";
+      if (s.comparison) h += "<p class=\"note\">" + esc(s.comparison) + "</p>";
+    }
+    h += timeline(r.reference_segments, r.duration_s, "Reference");
+    SIDS.forEach(function (sid) { var x = r.results[sid] || {}; h += timeline(x.segments, r.duration_s, NAMES[sid] + " prediction"); });
+    $("#recDetail").innerHTML = h;
+  }
+  document.querySelectorAll("[data-rec]").forEach(function (b) { b.addEventListener("click", function () { showRec(b.getAttribute("data-rec")); $("#recPanel").scrollIntoView({ block: "nearest" }); }); });
+  if (RECS.length) showRec(RECS[0].recording_id); else $("#recDetail").innerHTML = '<p class="note">No recordings listed.</p>';
+  if (B.cross_recording && B.cross_recording.length) {
+    $("#recPanel").insertAdjacentHTML("beforebegin", '<div class="panel"><h2 style="font-size:16px">Across all recordings</h2><ul class="st">' + B.cross_recording.map(function (c) { return "<li><b>" + esc(c.question) + ".</b> " + esc(c.answer) + "</li>"; }).join("") + "</ul></div>");
+  }
+
+  // ---------------- upload ----------------
+  var file = null, duration = null, lastResult = null;
+  var api = location.protocol.indexOf("http") === 0 ? "" : null;
+  $("#uploadJump").addEventListener("click", function () { $("#upload").scrollIntoView({ block: "start" }); $("#audioFile").focus(); });
+  function setStatus(msg, bad) { $("#runStatus").innerHTML = bad ? '<span style="color:var(--bad)">' + msg + "</span>" : msg; }
+  if (api === null) setStatus('Diarization needs the local server. Run <code>python server/app.py</code> from the project folder, then open <code>http://127.0.0.1:8765/</code>. Opened as a file, this page can only preview audio.');
+  else fetch("/api/status").then(function (r) { return r.json(); }).then(function (st) {
+    var s = st.systems["pyannote-community-1"];
+    setStatus(s.available ? "Server ready. " + esc(st.privacy) : "Server running, but the model is unavailable: " + esc(s.detail), !s.available);
+  }).catch(function () { setStatus("Could not reach the Voice Arena server.", true); });
+  $("#audioFile").addEventListener("change", function () {
+    file = this.files[0]; duration = null; lastResult = null; $("#runResult").innerHTML = "";
+    if (!file) { $("#fileInfo").textContent = ""; $("#player").hidden = true; $("#runBtn").disabled = true; return; }
+    if (file.size > 50 * 1024 * 1024) { $("#fileInfo").innerHTML = '<span style="color:var(--bad)">' + esc(file.name) + " is larger than the 50 MB limit.</span>"; $("#runBtn").disabled = true; return; }
+    var p = $("#player"); p.src = URL.createObjectURL(file); p.hidden = false;
+    $("#fileInfo").textContent = file.name + " · " + (file.size / 1048576).toFixed(1) + " MB · reading duration…";
+    p.onloadedmetadata = function () { duration = p.duration; $("#fileInfo").textContent = file.name + " · " + (file.size / 1048576).toFixed(1) + " MB · " + duration.toFixed(1) + " s"; };
+    p.onerror = function () { $("#fileInfo").textContent = file.name + " · the browser cannot preview this format; the server may still decode it."; };
+    $("#runBtn").disabled = api === null;
+  });
+  $("#runBtn").addEventListener("click", function () {
+    if (!file || api === null) return;
+    var btn = this; btn.disabled = true; setStatus("Uploading and running " + esc($("#sysSel").selectedOptions[0].textContent) + "… this can take a while on CPU.");
+    fetch("/api/diarize", { method: "POST", headers: { "X-Filename": file.name, "X-System": $("#sysSel").value }, body: file })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (x) { btn.disabled = false; if (!x.ok) { setStatus("Failed: " + esc(x.j.error) + (x.j.fix ? " " + esc(x.j.fix) : ""), true); return; } lastResult = x.j; renderResult(x.j); setStatus("Done."); })
+      .catch(function (e) { btn.disabled = false; setStatus("Request failed: " + esc(e.message), true); });
+  });
+  function dl(name, text, type) { var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type: type })); a.download = name; a.click(); }
+  function renderResult(j) {
+    var segs = j.segments.map(function (s) { return [s.start, s.end, s.speaker]; });
+    var h = '<p class="note">Model: <b>' + esc(j.model) + "</b> · revision " + esc(j.model_revision) + " · " + esc(JSON.stringify(j.package_versions)) + " · device " + esc(j.device) +
+      " · " + j.n_speakers + " speakers · inference " + j.processing_seconds + " s (RTF " + j.rtf + ")</p><p class=\"note\">" + esc(j.note) + "</p>" + timeline(segs, j.duration_s, "Predicted speakers") +
+      '<div class="actions"><button class="btn small" type="button" id="dlRttm">Download RTTM</button><button class="btn small" type="button" id="dlJson">Download JSON</button></div>' +
+      '<div class="scroll" style="max-height:260px;overflow-y:auto;margin-top:8px"><table><thead><tr><th>Start</th><th>End</th><th>Speaker</th></tr></thead><tbody>' +
+      j.segments.map(function (s) { return '<tr><td><button class="seg-time" type="button" data-t="' + s.start + '">' + s.start.toFixed(2) + " s</button></td><td>" + s.end.toFixed(2) + " s</td><td>" + esc(s.speaker) + "</td></tr>"; }).join("") + "</tbody></table></div>" +
+      '<div class="panel"><label class="tag" for="refFile">Optional: reference RTTM for objective scoring</label><br><input type="file" id="refFile" accept=".rttm,.txt"> <button class="btn small" type="button" id="scoreBtn" disabled>Score against reference</button><div id="scoreOut" class="note"></div></div>';
+    $("#runResult").innerHTML = h;
+    $("#dlRttm").onclick = function () { dl(j.filename + ".rttm", j.rttm, "text/plain"); };
+    $("#dlJson").onclick = function () { dl(j.filename + ".diarization.json", JSON.stringify(j, null, 2), "application/json"); };
+    document.querySelectorAll("[data-t]").forEach(function (b) { b.onclick = function () { var p = $("#player"); p.currentTime = Number(b.getAttribute("data-t")); p.play().catch(function () {}); }; });
+    $("#refFile").onchange = function () { $("#scoreBtn").disabled = !this.files[0]; };
+    $("#scoreBtn").onclick = function () {
+      var rf = $("#refFile").files[0]; if (!rf) return;
+      rf.text().then(function (ref) {
+        return fetch("/api/score", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ prediction_rttm: j.rttm, reference_rttm: ref, duration_s: j.duration_s }) });
+      }).then(function (r) { return r.json().then(function (x) { return { ok: r.ok, x: x }; }); }).then(function (o) {
+        $("#scoreOut").innerHTML = o.ok ? "DER " + f(o.x.DER) + " % · JER " + f(o.x.JER) + " % · missed " + f(o.x.missed_pct) + " % · false alarm " + f(o.x.false_alarm_pct) + " % · confusion " + f(o.x.confusion_pct) + " % · overlap DER " + f(o.x.overlap_DER) + " % · speakers " + o.x.n_predicted_speakers + " vs " + o.x.n_reference_speakers + " (reference). " + esc(o.x.note)
+          : '<span style="color:var(--bad)">' + esc(o.x.error) + (o.x.fix ? " " + esc(o.x.fix) : "") + "</span>";
+      }).catch(function (e) { $("#scoreOut").innerHTML = '<span style="color:var(--bad)">' + esc(e.message) + "</span>"; });
+    };
+  }
+})();
+</script>
+</body>
+</html>

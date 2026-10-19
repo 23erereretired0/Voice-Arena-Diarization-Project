@@ -1,0 +1,20 @@
+{
+  "_comment": "Documented audio/output inspections. Each entry must state what was measured, how, by whom and when. analyze.py cites these with basis 'inspection'. Never add an entry without a reproducible command.",
+  "inspections": [
+    {
+      "recording_ids": ["ami_ES2004a_ihm_0300_0480", "ami_ES2004a_sdm_0300_0480"],
+      "system_id": "api-system",
+      "date": "2026-10-18",
+      "performed_by": "evaluator (Windows 11 machine)",
+      "commands": [
+        "ffmpeg -i audio/<rid>.wav -af volumedetect -f null -",
+        "count of results.channels[0].alternatives[0].words in predictions/api-system/raw/<rid>.json"
+      ],
+      "measurements": {
+        "ami_ES2004a_ihm_0300_0480": {"mean_volume_db": -34.8, "max_volume_db": -3.3, "deepgram_words": 319},
+        "ami_ES2004a_sdm_0300_0480": {"mean_volume_db": -46.5, "max_volume_db": -16.1, "deepgram_words": 47}
+      },
+      "finding": "The far-field excerpt is 11.7 dB quieter on average than the close-talk excerpt of the same meeting window, and Deepgram recognised 47 words in it versus 319 (85% fewer). Because Deepgram speaker segments are built from recognised words, unrecognised speech is scored as missed (91.0% missed on the far-field excerpt)."
+    }
+  ]
+}

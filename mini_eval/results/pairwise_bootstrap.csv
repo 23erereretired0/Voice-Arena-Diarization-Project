@@ -1,0 +1,2 @@
+system_a,system_b,track,n_recordings,delta_pp,ci95_low,ci95_high,p_two_sided,p_holm,verdict,replicates,seed,alpha,practical_threshold_pp,min_recordings,note
+api-system,pyannote-community-1,audio_only_batch,5,,,,,,insufficient_sample,10000,20261015,0.05,1.0,20,n=5 < 20: CI and significance not reported

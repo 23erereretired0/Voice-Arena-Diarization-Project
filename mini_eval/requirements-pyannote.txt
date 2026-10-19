@@ -1,0 +1,7 @@
+# Community-1 requires pyannote.audio 4.x (model card). Record the exact
+# resolved versions with scripts/env_report.py --tag pyannote after install,
+# then replace these ranges with == pins in your fork for full reproducibility.
+pyannote.audio>=4.0,<5
+huggingface_hub
+numpy>=1.24
+requests>=2.31

@@ -1,0 +1,112 @@
+{
+  "system_id": "api-system",
+  "runner": "run_api.py --provider deepgram",
+  "track": "audio_only_batch",
+  "speaker_count_condition": "unknown (no speaker-count parameters sent)",
+  "model_identifier": "Deepgram: nova-3 + diarize_model=v2",
+  "model_revision": "{\"ami_ES2004a_ihm_0300_0480\": {\"request_id\": \"01a1508c-368f-7d20-adac-6db5cb340dc8\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_ES2004a_sdm_0300_0480\": {\"request_id\": \"01a1508c-47e6-7772-993a-ce5e965d8ba8\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_IS1009a_sdm_0300_0480\": {\"request_id\": \"01a1508c-5948-7f53-a489-227456e5bb65\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_TS3003a_ihm_0300_0480\": {\"request_id\": \"01a1508c-68da-78f1-9b24-add0b5766c17\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_EN2002a_sdm_0300_0480\": {\"request_id\": \"01a1508c-7831-7c02-8ac3-f91e2e571a10\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}}",
+  "package_versions": {
+    "requests": "2.34.2",
+    "python": "3.11.9"
+  },
+  "hardware": {
+    "type": "remote API",
+    "region": "provider default",
+    "client_os": "Windows-10-10.0.26100-SP0"
+  },
+  "settings": {
+    "provider": "deepgram",
+    "timeout_s": 900.0,
+    "max_attempts": 3,
+    "word_merge_gap_s": 0.2,
+    "output_granularity": "word-level",
+    "overlap_capable": false,
+    "timing": "end-to-end wall clock incl. upload, queueing, polling and network",
+    "deepgram_model": "nova-3",
+    "deepgram_diarizer": "v2",
+    "pyannoteai_model": "precision-3",
+    "notes": "verify endpoint shapes against provider docs on the run date"
+  },
+  "model_load_seconds": null,
+  "warmup_seconds": null,
+  "run_started_utc": "2026-10-18T19:45:27+00:00",
+  "run_finished_utc": "2026-10-18T19:45:48+00:00",
+  "blocked_reason": null,
+  "recordings": [
+    {
+      "recording_id": "ami_ES2004a_ihm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 5.618,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T19:45:27+00:00",
+      "finished_utc": "2026-10-18T19:45:32+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 3
+      },
+      "rtf": 0.031211111111111113
+    },
+    {
+      "recording_id": "ami_ES2004a_sdm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 4.345,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T19:45:32+00:00",
+      "finished_utc": "2026-10-18T19:45:37+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 2
+      },
+      "rtf": 0.024138888888888887
+    },
+    {
+      "recording_id": "ami_IS1009a_sdm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 4.078,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T19:45:37+00:00",
+      "finished_utc": "2026-10-18T19:45:41+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 3
+      },
+      "rtf": 0.022655555555555557
+    },
+    {
+      "recording_id": "ami_TS3003a_ihm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 3.924,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T19:45:41+00:00",
+      "finished_utc": "2026-10-18T19:45:45+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 2
+      },
+      "rtf": 0.0218
+    },
+    {
+      "recording_id": "ami_EN2002a_sdm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 3.777,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T19:45:45+00:00",
+      "finished_utc": "2026-10-18T19:45:48+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 4
+      },
+      "rtf": 0.020983333333333333
+    }
+  ]
+}

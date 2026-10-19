@@ -1,0 +1,377 @@
+{
+  "_comment": "Ten-recording mini benchmark. AMI excerpts are fixed; VoxConverse files are chosen by rules evaluated on the reference annotations inside the excerpt window (see vox_select), applied in order, each file used once. Windows were fixed before any system ran and are never changed per system.",
+  "excerpt_policy": "Fixed 180 s window per recording (shorter if the file is shorter). Reference turns crossing the window edge are truncated at the edge (documented edge effect).",
+  "target_audio_format": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "encoding": "pcm_s16le"
+  },
+  "tag_rules": {
+    "n_speakers_bin": "from cropped reference: 2 | 3-5 | 6+ (1 speaker -> '1')",
+    "overlap_level": "from cropped reference overlap ratio: low < 0.05, high >= 0.15, otherwise medium",
+    "short_turns": "speaker changes per minute from cropped reference (reported, used only for vox slot 5)",
+    "unknown": "any tag without documented evidence is 'unknown' and only matches the 'All' filter"
+  },
+  "coverage_gaps": [
+    "telephone / narrowband: no openly licensed telephone corpus with diarization references is used (CALLHOME/DIHARD are LDC-licensed)",
+    "audio quality (clean vs noisy): no per-file metadata in AMI or VoxConverse; remains 'unknown' unless a documented listening check is added",
+    "informal conversation: not separately represented (AMI EN2002a is a non-scenario meeting, tagged meeting)"
+  ],
+  "recordings": [
+    {
+      "recording_id": "ami_ES2004a_ihm_0300_0480",
+      "source": "AMI Meeting Corpus",
+      "dataset_version": "AMI corpus (Edinburgh mirror); references: AMI-diarization-setup only_words (commit recorded at prep)",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "license": "CC BY 4.0",
+      "meeting_id": "ES2004a",
+      "audio_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2004a/audio/ES2004a.Mix-Headset.wav",
+      "reference": {
+        "kind": "ami_only_words",
+        "repo": "BUTSpeechFIT/AMI-diarization-setup",
+        "path": "only_words/rttms/test/ES2004a.rttm",
+        "branches": [
+          "main",
+          "master"
+        ]
+      },
+      "excerpt_start_s": 300.0,
+      "excerpt_end_s": 480.0,
+      "tags_declared": {
+        "recording_type": "meeting",
+        "mic_distance": "close-talk",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "AMI is a meeting corpus [methodology ref 1]",
+        "mic_distance": "AMI channel Mix-Headset: headset microphones, digitally mixed",
+        "audio_quality": "no per-file quality metadata; set only after a documented listening check"
+      },
+      "language": "en",
+      "selection_reason": "close-talk reference point; paired with the far-field cut of the same window"
+    },
+    {
+      "recording_id": "ami_ES2004a_sdm_0300_0480",
+      "source": "AMI Meeting Corpus",
+      "dataset_version": "AMI corpus (Edinburgh mirror); references: AMI-diarization-setup only_words (commit recorded at prep)",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "license": "CC BY 4.0",
+      "meeting_id": "ES2004a",
+      "audio_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2004a/audio/ES2004a.Array1-01.wav",
+      "reference": {
+        "kind": "ami_only_words",
+        "repo": "BUTSpeechFIT/AMI-diarization-setup",
+        "path": "only_words/rttms/test/ES2004a.rttm",
+        "branches": [
+          "main",
+          "master"
+        ]
+      },
+      "excerpt_start_s": 300.0,
+      "excerpt_end_s": 480.0,
+      "tags_declared": {
+        "recording_type": "meeting",
+        "mic_distance": "far-field",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "AMI is a meeting corpus [methodology ref 1]",
+        "mic_distance": "AMI channel Array1-01: single distant microphone (Array1 channel 1)",
+        "audio_quality": "no per-file quality metadata; set only after a documented listening check"
+      },
+      "language": "en",
+      "selection_reason": "far-field version of the same audio window as ami_ES2004a_ihm"
+    },
+    {
+      "recording_id": "ami_IS1009a_sdm_0300_0480",
+      "source": "AMI Meeting Corpus",
+      "dataset_version": "AMI corpus (Edinburgh mirror); references: AMI-diarization-setup only_words (commit recorded at prep)",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "license": "CC BY 4.0",
+      "meeting_id": "IS1009a",
+      "audio_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/IS1009a/audio/IS1009a.Array1-01.wav",
+      "reference": {
+        "kind": "ami_only_words",
+        "repo": "BUTSpeechFIT/AMI-diarization-setup",
+        "path": "only_words/rttms/test/IS1009a.rttm",
+        "branches": [
+          "main",
+          "master"
+        ]
+      },
+      "excerpt_start_s": 300.0,
+      "excerpt_end_s": 480.0,
+      "tags_declared": {
+        "recording_type": "meeting",
+        "mic_distance": "far-field",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "AMI is a meeting corpus [methodology ref 1]",
+        "mic_distance": "AMI channel Array1-01: single distant microphone (Array1 channel 1)",
+        "audio_quality": "no per-file quality metadata; set only after a documented listening check"
+      },
+      "language": "en",
+      "selection_reason": "far-field, different site (IDIAP)"
+    },
+    {
+      "recording_id": "ami_TS3003a_ihm_0300_0480",
+      "source": "AMI Meeting Corpus",
+      "dataset_version": "AMI corpus (Edinburgh mirror); references: AMI-diarization-setup only_words (commit recorded at prep)",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "license": "CC BY 4.0",
+      "meeting_id": "TS3003a",
+      "audio_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/TS3003a/audio/TS3003a.Mix-Headset.wav",
+      "reference": {
+        "kind": "ami_only_words",
+        "repo": "BUTSpeechFIT/AMI-diarization-setup",
+        "path": "only_words/rttms/test/TS3003a.rttm",
+        "branches": [
+          "main",
+          "master"
+        ]
+      },
+      "excerpt_start_s": 300.0,
+      "excerpt_end_s": 480.0,
+      "tags_declared": {
+        "recording_type": "meeting",
+        "mic_distance": "close-talk",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "AMI is a meeting corpus [methodology ref 1]",
+        "mic_distance": "AMI channel Mix-Headset: headset microphones, digitally mixed",
+        "audio_quality": "no per-file quality metadata; set only after a documented listening check"
+      },
+      "language": "en",
+      "selection_reason": "close-talk, different site (TNO)"
+    },
+    {
+      "recording_id": "ami_EN2002a_sdm_0300_0480",
+      "source": "AMI Meeting Corpus",
+      "dataset_version": "AMI corpus (Edinburgh mirror); references: AMI-diarization-setup only_words (commit recorded at prep)",
+      "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+      "license": "CC BY 4.0",
+      "meeting_id": "EN2002a",
+      "audio_url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/EN2002a/audio/EN2002a.Array1-01.wav",
+      "reference": {
+        "kind": "ami_only_words",
+        "repo": "BUTSpeechFIT/AMI-diarization-setup",
+        "path": "only_words/rttms/test/EN2002a.rttm",
+        "branches": [
+          "main",
+          "master"
+        ]
+      },
+      "excerpt_start_s": 300.0,
+      "excerpt_end_s": 480.0,
+      "tags_declared": {
+        "recording_type": "meeting",
+        "mic_distance": "far-field",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "AMI is a meeting corpus [methodology ref 1]",
+        "mic_distance": "AMI channel Array1-01: single distant microphone (Array1 channel 1)",
+        "audio_quality": "no per-file quality metadata; set only after a documented listening check"
+      },
+      "language": "en",
+      "selection_reason": "far-field, non-scenario (natural) AMI meeting"
+    },
+    {
+      "recording_id": "vox_{vox_id}_0000_0180",
+      "slot": 1,
+      "source": "VoxConverse",
+      "dataset_version": "VoxConverse v0.3 test split (repo commit recorded at prep)",
+      "source_url": "https://github.com/joonson/voxconverse",
+      "license": "CC BY 4.0 for research purposes; video copyright remains with the original owners",
+      "vox_id": "auto",
+      "vox_select": {
+        "n_speakers": [
+          2,
+          2
+        ],
+        "order": "file_id"
+      },
+      "audio_zip_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.zip",
+      "reference": {
+        "kind": "voxconverse",
+        "repo": "joonson/voxconverse",
+        "path": "test/{vox_id}.rttm",
+        "branches": [
+          "master"
+        ]
+      },
+      "excerpt_start_s": 0.0,
+      "excerpt_end_s": 180.0,
+      "tags_declared": {
+        "recording_type": "interview/media",
+        "mic_distance": "unknown",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "VoxConverse clips are extracted from YouTube videos (debates, news, talk shows) [methodology ref 7]",
+        "mic_distance": "not documented per file",
+        "audio_quality": "not documented per file"
+      },
+      "language": "en (expected; verify)",
+      "selection_reason": "two-speaker conversation"
+    },
+    {
+      "recording_id": "vox_{vox_id}_0000_0180",
+      "slot": 2,
+      "source": "VoxConverse",
+      "dataset_version": "VoxConverse v0.3 test split (repo commit recorded at prep)",
+      "source_url": "https://github.com/joonson/voxconverse",
+      "license": "CC BY 4.0 for research purposes; video copyright remains with the original owners",
+      "vox_id": "auto",
+      "vox_select": {
+        "n_speakers": [
+          3,
+          5
+        ],
+        "order": "file_id"
+      },
+      "audio_zip_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.zip",
+      "reference": {
+        "kind": "voxconverse",
+        "repo": "joonson/voxconverse",
+        "path": "test/{vox_id}.rttm",
+        "branches": [
+          "master"
+        ]
+      },
+      "excerpt_start_s": 0.0,
+      "excerpt_end_s": 180.0,
+      "tags_declared": {
+        "recording_type": "interview/media",
+        "mic_distance": "unknown",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "VoxConverse clips are extracted from YouTube videos (debates, news, talk shows) [methodology ref 7]",
+        "mic_distance": "not documented per file",
+        "audio_quality": "not documented per file"
+      },
+      "language": "en (expected; verify)",
+      "selection_reason": "three to five speakers"
+    },
+    {
+      "recording_id": "vox_{vox_id}_0000_0180",
+      "slot": 3,
+      "source": "VoxConverse",
+      "dataset_version": "VoxConverse v0.3 test split (repo commit recorded at prep)",
+      "source_url": "https://github.com/joonson/voxconverse",
+      "license": "CC BY 4.0 for research purposes; video copyright remains with the original owners",
+      "vox_id": "auto",
+      "vox_select": {
+        "n_speakers": [
+          6,
+          999
+        ],
+        "order": "file_id"
+      },
+      "audio_zip_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.zip",
+      "reference": {
+        "kind": "voxconverse",
+        "repo": "joonson/voxconverse",
+        "path": "test/{vox_id}.rttm",
+        "branches": [
+          "master"
+        ]
+      },
+      "excerpt_start_s": 0.0,
+      "excerpt_end_s": 180.0,
+      "tags_declared": {
+        "recording_type": "interview/media",
+        "mic_distance": "unknown",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "VoxConverse clips are extracted from YouTube videos (debates, news, talk shows) [methodology ref 7]",
+        "mic_distance": "not documented per file",
+        "audio_quality": "not documented per file"
+      },
+      "language": "en (expected; verify)",
+      "selection_reason": "six or more speakers"
+    },
+    {
+      "recording_id": "vox_{vox_id}_0000_0180",
+      "slot": 4,
+      "source": "VoxConverse",
+      "dataset_version": "VoxConverse v0.3 test split (repo commit recorded at prep)",
+      "source_url": "https://github.com/joonson/voxconverse",
+      "license": "CC BY 4.0 for research purposes; video copyright remains with the original owners",
+      "vox_id": "auto",
+      "vox_select": {
+        "n_speakers": [
+          2,
+          999
+        ],
+        "order": "overlap_ratio_desc"
+      },
+      "audio_zip_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.zip",
+      "reference": {
+        "kind": "voxconverse",
+        "repo": "joonson/voxconverse",
+        "path": "test/{vox_id}.rttm",
+        "branches": [
+          "master"
+        ]
+      },
+      "excerpt_start_s": 0.0,
+      "excerpt_end_s": 180.0,
+      "tags_declared": {
+        "recording_type": "interview/media",
+        "mic_distance": "unknown",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "VoxConverse clips are extracted from YouTube videos (debates, news, talk shows) [methodology ref 7]",
+        "mic_distance": "not documented per file",
+        "audio_quality": "not documented per file"
+      },
+      "language": "en (expected; verify)",
+      "selection_reason": "highest reference overlap ratio among remaining files"
+    },
+    {
+      "recording_id": "vox_{vox_id}_0000_0180",
+      "slot": 5,
+      "source": "VoxConverse",
+      "dataset_version": "VoxConverse v0.3 test split (repo commit recorded at prep)",
+      "source_url": "https://github.com/joonson/voxconverse",
+      "license": "CC BY 4.0 for research purposes; video copyright remains with the original owners",
+      "vox_id": "auto",
+      "vox_select": {
+        "n_speakers": [
+          2,
+          999
+        ],
+        "order": "speaker_changes_per_min_desc"
+      },
+      "audio_zip_url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.zip",
+      "reference": {
+        "kind": "voxconverse",
+        "repo": "joonson/voxconverse",
+        "path": "test/{vox_id}.rttm",
+        "branches": [
+          "master"
+        ]
+      },
+      "excerpt_start_s": 0.0,
+      "excerpt_end_s": 180.0,
+      "tags_declared": {
+        "recording_type": "interview/media",
+        "mic_distance": "unknown",
+        "audio_quality": "unknown"
+      },
+      "tag_evidence": {
+        "recording_type": "VoxConverse clips are extracted from YouTube videos (debates, news, talk shows) [methodology ref 7]",
+        "mic_distance": "not documented per file",
+        "audio_quality": "not documented per file"
+      },
+      "language": "en (expected; verify)",
+      "selection_reason": "most frequent speaker changes (short turns, interruptions) among remaining files"
+    }
+  ]
+}

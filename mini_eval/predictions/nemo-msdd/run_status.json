@@ -1,0 +1,83 @@
+{
+  "system_id": "nemo-msdd",
+  "runner": "run_nemo_msdd.py",
+  "track": "audio_only_batch",
+  "speaker_count_condition": "unknown (oracle_num_speakers=false)",
+  "model_identifier": "NeMo NeuralDiarizer (MSDD) + titanet_large + vad_multilingual_marblenet",
+  "model_revision": null,
+  "package_versions": {},
+  "hardware": {},
+  "settings": {},
+  "model_load_seconds": null,
+  "warmup_seconds": null,
+  "run_started_utc": "2026-10-18T20:59:47+00:00",
+  "run_finished_utc": "2026-10-18T20:59:47+00:00",
+  "blocked_reason": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+  "recordings": [
+    {
+      "recording_id": "ami_ES2004a_ihm_0300_0480",
+      "status": "not_run",
+      "processing_seconds": null,
+      "audio_seconds": 180.0,
+      "started_utc": null,
+      "finished_utc": null,
+      "attempts": 0,
+      "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+      "notes": null,
+      "extra": {},
+      "rtf": null
+    },
+    {
+      "recording_id": "ami_ES2004a_sdm_0300_0480",
+      "status": "not_run",
+      "processing_seconds": null,
+      "audio_seconds": 180.0,
+      "started_utc": null,
+      "finished_utc": null,
+      "attempts": 0,
+      "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+      "notes": null,
+      "extra": {},
+      "rtf": null
+    },
+    {
+      "recording_id": "ami_IS1009a_sdm_0300_0480",
+      "status": "not_run",
+      "processing_seconds": null,
+      "audio_seconds": 180.0,
+      "started_utc": null,
+      "finished_utc": null,
+      "attempts": 0,
+      "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+      "notes": null,
+      "extra": {},
+      "rtf": null
+    },
+    {
+      "recording_id": "ami_TS3003a_ihm_0300_0480",
+      "status": "not_run",
+      "processing_seconds": null,
+      "audio_seconds": 180.0,
+      "started_utc": null,
+      "finished_utc": null,
+      "attempts": 0,
+      "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+      "notes": null,
+      "extra": {},
+      "rtf": null
+    },
+    {
+      "recording_id": "ami_EN2002a_sdm_0300_0480",
+      "status": "not_run",
+      "processing_seconds": null,
+      "audio_seconds": 180.0,
+      "started_utc": null,
+      "finished_utc": null,
+      "attempts": 0,
+      "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+      "notes": null,
+      "extra": {},
+      "rtf": null
+    }
+  ]
+}

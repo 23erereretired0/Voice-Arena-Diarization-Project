@@ -1,0 +1,206 @@
+{
+  "created_utc": "2026-10-18T20:34:42+00:00",
+  "systems": {
+    "api-system": {
+      "run_status_present": true,
+      "blocked_reason": null,
+      "recordings": {
+        "ami_ES2004a_ihm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\api-system\\ami_ES2004a_ihm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 49,
+          "n_speakers": 3,
+          "file_ids": [
+            "ami_ES2004a_ihm_0300_0480"
+          ]
+        },
+        "ami_ES2004a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\api-system\\ami_ES2004a_sdm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 6,
+          "n_speakers": 2,
+          "file_ids": [
+            "ami_ES2004a_sdm_0300_0480"
+          ]
+        },
+        "ami_IS1009a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\api-system\\ami_IS1009a_sdm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 43,
+          "n_speakers": 3,
+          "file_ids": [
+            "ami_IS1009a_sdm_0300_0480"
+          ]
+        },
+        "ami_TS3003a_ihm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\api-system\\ami_TS3003a_ihm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 52,
+          "n_speakers": 2,
+          "file_ids": [
+            "ami_TS3003a_ihm_0300_0480"
+          ]
+        },
+        "ami_EN2002a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\api-system\\ami_EN2002a_sdm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 53,
+          "n_speakers": 4,
+          "file_ids": [
+            "ami_EN2002a_sdm_0300_0480"
+          ]
+        }
+      },
+      "unexpected_files": []
+    },
+    "nemo-msdd": {
+      "run_status_present": true,
+      "blocked_reason": "data not prepared: audio/manifest_resolved.json lists 0 prepared recordings (10 failed in prepare_data.py). First preparation error: HTTPSConnectionPool(host='groups.inf.ed.ac.uk', port=443): Max retries exceeded with url: /ami/AMICorpusMirror/amicorpus/ES2004a/audio/ES2004a.Mix-Headset.wav (...",
+      "recordings": {
+        "ami_ES2004a_ihm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\nemo-msdd\\ami_ES2004a_ihm_0300_0480.rttm",
+          "ok": false,
+          "empty": true,
+          "errors": [
+            "file does not exist"
+          ],
+          "warnings": [],
+          "n_segments": 0,
+          "n_speakers": 0,
+          "file_ids": []
+        },
+        "ami_ES2004a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\nemo-msdd\\ami_ES2004a_sdm_0300_0480.rttm",
+          "ok": false,
+          "empty": true,
+          "errors": [
+            "file does not exist"
+          ],
+          "warnings": [],
+          "n_segments": 0,
+          "n_speakers": 0,
+          "file_ids": []
+        },
+        "ami_IS1009a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\nemo-msdd\\ami_IS1009a_sdm_0300_0480.rttm",
+          "ok": false,
+          "empty": true,
+          "errors": [
+            "file does not exist"
+          ],
+          "warnings": [],
+          "n_segments": 0,
+          "n_speakers": 0,
+          "file_ids": []
+        },
+        "ami_TS3003a_ihm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\nemo-msdd\\ami_TS3003a_ihm_0300_0480.rttm",
+          "ok": false,
+          "empty": true,
+          "errors": [
+            "file does not exist"
+          ],
+          "warnings": [],
+          "n_segments": 0,
+          "n_speakers": 0,
+          "file_ids": []
+        },
+        "ami_EN2002a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\nemo-msdd\\ami_EN2002a_sdm_0300_0480.rttm",
+          "ok": false,
+          "empty": true,
+          "errors": [
+            "file does not exist"
+          ],
+          "warnings": [],
+          "n_segments": 0,
+          "n_speakers": 0,
+          "file_ids": []
+        }
+      },
+      "unexpected_files": []
+    },
+    "pyannote-community-1": {
+      "run_status_present": true,
+      "blocked_reason": null,
+      "recordings": {
+        "ami_ES2004a_ihm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\pyannote-community-1\\ami_ES2004a_ihm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 49,
+          "n_speakers": 3,
+          "file_ids": [
+            "ami_ES2004a_ihm_0300_0480"
+          ]
+        },
+        "ami_ES2004a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\pyannote-community-1\\ami_ES2004a_sdm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 46,
+          "n_speakers": 3,
+          "file_ids": [
+            "ami_ES2004a_sdm_0300_0480"
+          ]
+        },
+        "ami_IS1009a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\pyannote-community-1\\ami_IS1009a_sdm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 68,
+          "n_speakers": 4,
+          "file_ids": [
+            "ami_IS1009a_sdm_0300_0480"
+          ]
+        },
+        "ami_TS3003a_ihm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\pyannote-community-1\\ami_TS3003a_ihm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 18,
+          "n_speakers": 1,
+          "file_ids": [
+            "ami_TS3003a_ihm_0300_0480"
+          ]
+        },
+        "ami_EN2002a_sdm_0300_0480": {
+          "path": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\predictions\\pyannote-community-1\\ami_EN2002a_sdm_0300_0480.rttm",
+          "ok": true,
+          "empty": false,
+          "errors": [],
+          "warnings": [],
+          "n_segments": 52,
+          "n_speakers": 4,
+          "file_ids": [
+            "ami_EN2002a_sdm_0300_0480"
+          ]
+        }
+      },
+      "unexpected_files": []
+    }
+  }
+}

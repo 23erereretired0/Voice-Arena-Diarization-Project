@@ -1,0 +1,243 @@
+{
+  "generated_utc": "2026-10-18T21:00:56+00:00",
+  "status": "measured (provisional)",
+  "recordings": [
+    {
+      "recording_id": "ami_ES2004a_ihm_0300_0480",
+      "main_error_category": "missed speech",
+      "comparison": "Lowest DER on this recording: pyannote speaker-diarization-community-1 (27.6%); highest: Deepgram: nova-3 + diarize_model=v2 (44.8%). A single recording does not establish which system is better in general.",
+      "statements": [
+        {
+          "basis": "measured",
+          "text": "pyannote speaker-diarization-community-1 had a DER of 27.6%. Its largest error component was missed speech (15.5% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (44.6%) was higher than its non-overlap DER (18.9%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 3 speakers versus 4 in the reference (under-counting by 1)."
+        },
+        {
+          "basis": "status",
+          "text": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD): no score available (not_run)."
+        },
+        {
+          "basis": "measured",
+          "text": "Deepgram: nova-3 + diarize_model=v2 had a DER of 44.8%. Its largest error component was missed speech (35.2% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (66.6%) was higher than its non-overlap DER (33.6%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 3 speakers versus 4 in the reference (under-counting by 1)."
+        },
+        {
+          "basis": "inspection",
+          "text": "Documented inspection (2026-10-18, Deepgram: nova-3 + diarize_model=v2): The far-field excerpt is 11.7 dB quieter on average than the close-talk excerpt of the same meeting window, and Deepgram recognised 47 words in it versus 319 (85% fewer). Because Deepgram speaker segments are built from recognised words, unrecognised speech is scored as missed (91.0% missed on the far-field excerpt)."
+        }
+      ],
+      "n_systems_scored": 2
+    },
+    {
+      "recording_id": "ami_ES2004a_sdm_0300_0480",
+      "main_error_category": "missed speech",
+      "comparison": "Lowest DER on this recording: pyannote speaker-diarization-community-1 (37.8%); highest: Deepgram: nova-3 + diarize_model=v2 (93.4%). A single recording does not establish which system is better in general.",
+      "statements": [
+        {
+          "basis": "measured",
+          "text": "pyannote speaker-diarization-community-1 had a DER of 37.8%. Its largest error component was missed speech (27.0% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (52.5%) was higher than its non-overlap DER (30.2%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 3 speakers versus 4 in the reference (under-counting by 1)."
+        },
+        {
+          "basis": "hypothesis",
+          "text": "The recording uses a documented far-field microphone; quieter distant speech may contribute to missed speech. Not verified."
+        },
+        {
+          "basis": "status",
+          "text": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD): no score available (not_run)."
+        },
+        {
+          "basis": "measured",
+          "text": "Deepgram: nova-3 + diarize_model=v2 had a DER of 93.4%. Its largest error component was missed speech (91.0% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (96.6%) was higher than its non-overlap DER (91.7%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 2 speakers versus 4 in the reference (under-counting by 2)."
+        },
+        {
+          "basis": "inspection",
+          "text": "Documented inspection (2026-10-18, Deepgram: nova-3 + diarize_model=v2): The far-field excerpt is 11.7 dB quieter on average than the close-talk excerpt of the same meeting window, and Deepgram recognised 47 words in it versus 319 (85% fewer). Because Deepgram speaker segments are built from recognised words, unrecognised speech is scored as missed (91.0% missed on the far-field excerpt)."
+        }
+      ],
+      "n_systems_scored": 2
+    },
+    {
+      "recording_id": "ami_IS1009a_sdm_0300_0480",
+      "main_error_category": "missed speech",
+      "comparison": "Lowest DER on this recording: pyannote speaker-diarization-community-1 (32.1%); highest: Deepgram: nova-3 + diarize_model=v2 (39.6%). A single recording does not establish which system is better in general.",
+      "statements": [
+        {
+          "basis": "measured",
+          "text": "pyannote speaker-diarization-community-1 had a DER of 32.1%. Its largest error component was speaker confusion (14.9% of reference speaker time), i.e. speech attributed to the wrong speaker."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (45.3%) was higher than its non-overlap DER (27.2%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It found the correct number of speakers (4)."
+        },
+        {
+          "basis": "status",
+          "text": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD): no score available (not_run)."
+        },
+        {
+          "basis": "measured",
+          "text": "Deepgram: nova-3 + diarize_model=v2 had a DER of 39.6%. Its largest error component was missed speech (31.9% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (62.6%) was higher than its non-overlap DER (32.4%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 3 speakers versus 4 in the reference (under-counting by 1)."
+        },
+        {
+          "basis": "hypothesis",
+          "text": "The recording uses a documented far-field microphone; quieter distant speech may contribute to missed speech. Not verified."
+        }
+      ],
+      "n_systems_scored": 2
+    },
+    {
+      "recording_id": "ami_TS3003a_ihm_0300_0480",
+      "main_error_category": "missed speech",
+      "comparison": "Lowest DER on this recording: pyannote speaker-diarization-community-1 (8.9%); highest: Deepgram: nova-3 + diarize_model=v2 (23.8%). A single recording does not establish which system is better in general.",
+      "statements": [
+        {
+          "basis": "measured",
+          "text": "pyannote speaker-diarization-community-1 had a DER of 8.9%. Its largest error component was missed speech (7.0% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (51.2%) was higher than its non-overlap DER (8.1%). The reference contains only 3.2 s of overlapped speaker time, so the overlap figure is based on little data."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 1 speaker versus 3 in the reference (under-counting by 2)."
+        },
+        {
+          "basis": "status",
+          "text": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD): no score available (not_run)."
+        },
+        {
+          "basis": "measured",
+          "text": "Deepgram: nova-3 + diarize_model=v2 had a DER of 23.8%. Its largest error component was missed speech (22.2% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (55.1%) was higher than its non-overlap DER (23.2%). The reference contains only 3.2 s of overlapped speaker time, so the overlap figure is based on little data."
+        },
+        {
+          "basis": "measured",
+          "text": "It output 2 speakers versus 3 in the reference (under-counting by 1)."
+        }
+      ],
+      "n_systems_scored": 2
+    },
+    {
+      "recording_id": "ami_EN2002a_sdm_0300_0480",
+      "main_error_category": "missed speech",
+      "comparison": "Lowest DER on this recording: pyannote speaker-diarization-community-1 (11.3%); highest: Deepgram: nova-3 + diarize_model=v2 (40.9%). A single recording does not establish which system is better in general.",
+      "statements": [
+        {
+          "basis": "measured",
+          "text": "pyannote speaker-diarization-community-1 had a DER of 11.3%. Its largest error component was missed speech (6.3% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (23.9%) was higher than its non-overlap DER (5.2%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It found the correct number of speakers (4)."
+        },
+        {
+          "basis": "hypothesis",
+          "text": "The recording uses a documented far-field microphone; quieter distant speech may contribute to missed speech. Not verified."
+        },
+        {
+          "basis": "status",
+          "text": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD): no score available (not_run)."
+        },
+        {
+          "basis": "measured",
+          "text": "Deepgram: nova-3 + diarize_model=v2 had a DER of 40.9%. Its largest error component was missed speech (21.6% of reference speaker time), i.e. reference speech the system did not output."
+        },
+        {
+          "basis": "measured",
+          "text": "Its overlap-region DER (60.8%) was higher than its non-overlap DER (31.3%)."
+        },
+        {
+          "basis": "measured",
+          "text": "It found the correct number of speakers (4)."
+        },
+        {
+          "basis": "hypothesis",
+          "text": "The recording uses a documented far-field microphone; quieter distant speech may contribute to missed speech. Not verified."
+        }
+      ],
+      "n_systems_scored": 2
+    }
+  ],
+  "cross_recording": [
+    {
+      "question": "Lowest pooled DER",
+      "answer": "pyannote speaker-diarization-community-1 (22.2%). pyannote speaker-diarization-community-1 22.2%; Deepgram: nova-3 + diarize_model=v2 47.0%"
+    },
+    {
+      "question": "Most consistent across recordings",
+      "answer": "pyannote speaker-diarization-community-1 (standard deviation of per-recording DER 11.5 points)."
+    },
+    {
+      "question": "Best on overlapping speech",
+      "answer": "pyannote speaker-diarization-community-1 (pooled overlap-region DER 39.7%)."
+    },
+    {
+      "question": "Hardest conditions (mean DER across systems)",
+      "answer": "overlap_level=high 42.6% (n=3); mic_distance=far-field 42.5% (n=3); mic_distance=close-talk 26.3% (n=2). Condition groups overlap and are small, so this is descriptive only."
+    },
+    {
+      "question": "Dominant errors",
+      "answer": "pyannote speaker-diarization-community-1: missed speech 55%, speaker confusion 28%, false alarm 17%; Deepgram: nova-3 + diarize_model=v2: missed speech 81%, speaker confusion 15%, false alarm 4%"
+    },
+    {
+      "question": "Accuracy / runtime / cost",
+      "answer": "pyannote speaker-diarization-community-1 DER 22.2% at RTF 0.777; Deepgram: nova-3 + diarize_model=v2 DER 47.0% at RTF 0.024. Cost per audio hour is not reported: no documented price inputs were recorded for this run."
+    },
+    {
+      "question": "What cannot be concluded",
+      "answer": "With 5 recordings (below the 20-recording minimum in methodology §10.4) no confidence interval or significance is reported, rankings are provisional, and results do not generalise to telephone audio, other languages, or conditions absent from the sample."
+    }
+  ],
+  "blockers": [
+    "nemo-msdd: Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems."
+  ]
+}

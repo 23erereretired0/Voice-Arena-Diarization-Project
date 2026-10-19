@@ -1,0 +1,108 @@
+{
+  "system_id": "pyannote-community-1",
+  "runner": "run_pyannote.py",
+  "track": "audio_only_batch",
+  "speaker_count_condition": "unknown",
+  "model_identifier": "pyannote/speaker-diarization-community-1",
+  "model_revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+  "package_versions": {
+    "pyannote.audio": "4.0.7",
+    "torch": "2.14.1+cpu",
+    "python": "3.11.9"
+  },
+  "hardware": {
+    "device": "cpu",
+    "gpu": null,
+    "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "os": "Windows-10-10.0.26100-SP0"
+  },
+  "settings": {
+    "num_speakers": null,
+    "min_speakers": null,
+    "max_speakers": null,
+    "scored_output": "speaker_diarization (overlap-aware)",
+    "exclusive_output_used": false
+  },
+  "model_load_seconds": 2.231,
+  "warmup_seconds": 0.052,
+  "run_started_utc": "2026-10-18T20:00:18+00:00",
+  "run_finished_utc": "2026-10-18T20:12:00+00:00",
+  "blocked_reason": null,
+  "recordings": [
+    {
+      "recording_id": "ami_ES2004a_ihm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 135.744,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T20:00:21+00:00",
+      "finished_utc": "2026-10-18T20:02:37+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 3
+      },
+      "rtf": 0.7541333333333333
+    },
+    {
+      "recording_id": "ami_ES2004a_sdm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 134.828,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T20:02:37+00:00",
+      "finished_utc": "2026-10-18T20:04:51+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 3
+      },
+      "rtf": 0.7490444444444445
+    },
+    {
+      "recording_id": "ami_IS1009a_sdm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 139.796,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T20:04:51+00:00",
+      "finished_utc": "2026-10-18T20:07:11+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 4
+      },
+      "rtf": 0.7766444444444444
+    },
+    {
+      "recording_id": "ami_TS3003a_ihm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 147.521,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T20:07:11+00:00",
+      "finished_utc": "2026-10-18T20:09:39+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 1
+      },
+      "rtf": 0.8195611111111111
+    },
+    {
+      "recording_id": "ami_EN2002a_sdm_0300_0480",
+      "status": "ok",
+      "processing_seconds": 141.738,
+      "audio_seconds": 180.0,
+      "started_utc": "2026-10-18T20:09:39+00:00",
+      "finished_utc": "2026-10-18T20:12:00+00:00",
+      "attempts": 1,
+      "error": null,
+      "notes": null,
+      "extra": {
+        "n_predicted_speakers": 4
+      },
+      "rtf": 0.7874333333333333
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Core (orchestration, validation, scoring wrapper, statistics, tables).
+# Runs on Python 3.10+. Model runtimes have their own files (below), because
+# pyannote.audio and NeMo pin different torch versions: use separate venvs.
+numpy>=1.24
+requests>=2.31
+#
+# Separate environments (see ../docs/reproducibility.md):
+#   requirements-pyannote.txt  -> pyannote Community-1 runner
+#   requirements-nemo.txt      -> NeMo MSDD runner (prefer the NGC container)
+#   requirements-scorer.txt    -> dscore scorer (python 3.10 recommended)

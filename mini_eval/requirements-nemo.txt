@@ -1,0 +1,6 @@
+# Preferred: run inside the NVIDIA NeMo NGC container and record its digest.
+# pip alternative (record the exact version you install):
+nemo_toolkit[asr]>=2.0
+omegaconf
+numpy
+requests>=2.31

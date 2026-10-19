@@ -1,0 +1,58 @@
+{
+  "_comment": "Declared systems for the mini benchmark. One frozen configuration per system. Version fields marked RECORD_AT_RUNTIME are filled by the runner into predictions/<system>/run_status.json.",
+  "primary_track": "audio_only_batch",
+  "primary_speaker_count_condition": "unknown (system must estimate)",
+  "systems": [
+    {
+      "system_id": "pyannote-community-1",
+      "display_name": "pyannote speaker-diarization-community-1",
+      "company": "pyannoteAI (open-source pipeline)",
+      "model_identifier": "pyannote/speaker-diarization-community-1",
+      "model_revision": "RECORD_AT_RUNTIME (Hugging Face commit sha or local clone git sha)",
+      "package": "pyannote.audio 4.x (exact version RECORD_AT_RUNTIME)",
+      "deployment": "open-source, self-hosted",
+      "mode": "batch",
+      "track": "audio_only_batch",
+      "speaker_count_condition": "unknown",
+      "overlap_capable": true,
+      "output_granularity": "segment-level (speaker_diarization; exclusive variant not used for scoring)",
+      "prediction_dir": "predictions/pyannote-community-1",
+      "runner": "scripts/run_pyannote.py",
+      "settings": {"num_speakers": null, "min_speakers": null, "max_speakers": null, "device": "cuda if available else cpu"}
+    },
+    {
+      "system_id": "nemo-msdd",
+      "display_name": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD)",
+      "company": "NVIDIA",
+      "model_identifier": "NeMo NeuralDiarizer with diar_msdd_telephonic + titanet_large + vad_multilingual_marblenet",
+      "model_revision": "RECORD_AT_RUNTIME (nemo_toolkit version; resolved YAML saved to results/configs/)",
+      "package": "nemo_toolkit[asr] (exact version RECORD_AT_RUNTIME; pinned container recommended)",
+      "deployment": "open-source, self-hosted",
+      "mode": "batch",
+      "track": "audio_only_batch",
+      "speaker_count_condition": "unknown (oracle_num_speakers=false)",
+      "overlap_capable": true,
+      "output_granularity": "segment-level",
+      "prediction_dir": "predictions/nemo-msdd",
+      "runner": "scripts/run_nemo_msdd.py",
+      "settings": {"base_config": "diar_infer_meeting.yaml from the pinned NeMo tag", "oracle_vad": false, "oracle_num_speakers": false, "max_num_speakers": 8}
+    },
+    {
+      "system_id": "api-system",
+      "display_name": "Commercial API (provider chosen at run time)",
+      "company": "RECORD_AT_RUNTIME (Deepgram | AssemblyAI | pyannoteAI)",
+      "model_identifier": "RECORD_AT_RUNTIME (e.g. deepgram nova-3 + diarize_model=v2; assemblyai speaker_labels; pyannoteai precision-3)",
+      "model_revision": "RECORD_AT_RUNTIME from response metadata (e.g. Deepgram diarize_info.model_uuid)",
+      "package": "HTTP API via requests",
+      "deployment": "commercial API",
+      "mode": "batch",
+      "track": "audio_only_batch",
+      "speaker_count_condition": "unknown (no speaker-count parameters sent)",
+      "overlap_capable": "provider-dependent (word-level STT labels cannot express overlap)",
+      "output_granularity": "provider-dependent",
+      "prediction_dir": "predictions/api-system",
+      "runner": "scripts/run_api.py",
+      "settings": {"word_merge_gap_s": 0.2, "timeout_s": 900, "max_attempts": 3, "language_hint": "en (same for every STT-based API; not a speaker-count hint)"}
+    }
+  ]
+}

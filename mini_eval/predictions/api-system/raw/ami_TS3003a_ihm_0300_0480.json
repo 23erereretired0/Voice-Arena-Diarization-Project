@@ -1,0 +1,3070 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "01a1508c-68da-78f1-9b24-add0b5766c17",
+    "sha256": "d8a4514764dfe0f8cb81b4bb1001ca86a2b975766482c4ab903cf8d42e73b470",
+    "created": "2026-10-18T19:45:44.300Z",
+    "duration": 180.0,
+    "channels": 1,
+    "models": [
+      "2187e11a-3532-4498-b076-81fa530bdd49"
+    ],
+    "model_info": {
+      "2187e11a-3532-4498-b076-81fa530bdd49": {
+        "name": "general-nova-3",
+        "version": "2025-07-31.0",
+        "arch": "nova-3"
+      }
+    },
+    "diarize_info": {
+      "model_uuid": "6946b038-8264-4505-acf7-9822c009fecb",
+      "arch": "v2"
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "the user interface designer is going to do the technical function design user interface concept and user interface design and the marketing expert is doing a little bit of user requirements specification trend watching and project product evaluation so that's a bit what you're going to do but that will be all worked out in other meetings then we've got our first tool training we're going to work with a lot of high-tech tools here so it's it's handy if we have a little bit of training first as you can see we've got the smart boards here and here and the whiteboard in the whiteboard here there's a little toolbar on this side here are some functions you can save these functions we don't have anything to do with only undo you can undo a little piece of drawing a blank new document for each person select a pen razor capture we don't have to do anything with then we've got our pen this pen it's really funny because you can draw with it on this page in the i think it is format you can also select the current color and the line width but then first have to select the pen function but we're going to work with it in a minute so okay that's very simple and it's easy to draw your findings and drawings on there then a short thing about documents we've got our shared folder project project what was it project documents i think but you will found that already because there are a lot of documents in it already so that will be okay and these are available on the smart boards as well so if you have a document you wanna show just open it from the folder here is a simple toolbar it's what i just said it's safe print move back or forward one page you can switch between the different drawings and then we're going to try out the whiteboard so as you can see we're go going to draw an animal just to yeah just to get a bit familiar with it mouse wasn't running away that's interesting is everybody is anybody playing with the mouse no okay we're going to draw an animal and just",
+            "confidence": 0.99609375,
+            "words": [
+              {
+                "word": "the",
+                "start": 1.4399999,
+                "end": 2.24,
+                "confidence": 0.58251953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "user",
+                "start": 2.24,
+                "end": 2.6399999,
+                "confidence": 0.98095703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "interface",
+                "start": 2.6399999,
+                "end": 3.04,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "designer",
+                "start": 3.04,
+                "end": 3.52,
+                "confidence": 0.94921875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "is",
+                "start": 3.52,
+                "end": 3.6799998,
+                "confidence": 0.9482422,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "going",
+                "start": 3.6799998,
+                "end": 4.0,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 4.0,
+                "end": 4.08,
+                "confidence": 0.9838867,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "do",
+                "start": 4.08,
+                "end": 4.24,
+                "confidence": 0.9790039,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 4.24,
+                "end": 4.48,
+                "confidence": 0.9819336,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "technical",
+                "start": 4.48,
+                "end": 5.04,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "function",
+                "start": 5.04,
+                "end": 5.44,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "design",
+                "start": 5.44,
+                "end": 6.16,
+                "confidence": 0.9746094,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "user",
+                "start": 6.64,
+                "end": 7.04,
+                "confidence": 0.92578125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "interface",
+                "start": 7.04,
+                "end": 7.68,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "concept",
+                "start": 7.68,
+                "end": 8.48,
+                "confidence": 0.93530273,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 8.48,
+                "end": 8.559999,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "user",
+                "start": 8.559999,
+                "end": 8.88,
+                "confidence": 0.95166016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "interface",
+                "start": 8.88,
+                "end": 9.28,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "design",
+                "start": 9.28,
+                "end": 10.08,
+                "confidence": 0.8901367,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 11.12,
+                "end": 11.5199995,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 11.5199995,
+                "end": 11.84,
+                "confidence": 0.7558594,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "marketing",
+                "start": 11.84,
+                "end": 12.4,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "expert",
+                "start": 12.4,
+                "end": 13.2,
+                "confidence": 0.9707031,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "is",
+                "start": 13.415,
+                "end": 13.735,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "doing",
+                "start": 13.735,
+                "end": 13.975,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 13.975,
+                "end": 14.135,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "little",
+                "start": 14.135,
+                "end": 14.295,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "bit",
+                "start": 14.295,
+                "end": 14.455,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "of",
+                "start": 14.455,
+                "end": 14.615,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "user",
+                "start": 14.615,
+                "end": 15.015,
+                "confidence": 0.9472656,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "requirements",
+                "start": 15.015,
+                "end": 15.655,
+                "confidence": 0.8886719,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "specification",
+                "start": 15.655,
+                "end": 16.695,
+                "confidence": 0.9123535,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "trend",
+                "start": 16.695,
+                "end": 17.095,
+                "confidence": 0.98095703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "watching",
+                "start": 17.095,
+                "end": 17.814999,
+                "confidence": 0.9667969,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 17.895,
+                "end": 18.215,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "project",
+                "start": 18.215,
+                "end": 18.855,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "product",
+                "start": 18.855,
+                "end": 19.415,
+                "confidence": 0.98828125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "evaluation",
+                "start": 19.415,
+                "end": 20.695,
+                "confidence": 0.93408203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "so",
+                "start": 21.895,
+                "end": 22.055,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "that's",
+                "start": 22.055,
+                "end": 22.375,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 22.375,
+                "end": 22.535,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "bit",
+                "start": 22.535,
+                "end": 22.615,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "what",
+                "start": 22.615,
+                "end": 22.775,
+                "confidence": 0.9770508,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you're",
+                "start": 22.775,
+                "end": 23.015,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "going",
+                "start": 23.015,
+                "end": 23.175,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 23.175,
+                "end": 23.335,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "do",
+                "start": 23.335,
+                "end": 23.895,
+                "confidence": 0.8671875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "but",
+                "start": 24.695,
+                "end": 24.935,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "that",
+                "start": 24.935,
+                "end": 25.095,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "will",
+                "start": 25.095,
+                "end": 25.335,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "be",
+                "start": 25.335,
+                "end": 25.494999,
+                "confidence": 0.99316406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "all",
+                "start": 25.494999,
+                "end": 25.654999,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "worked",
+                "start": 25.654999,
+                "end": 25.974998,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "out",
+                "start": 25.974998,
+                "end": 26.215,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "in",
+                "start": 26.215,
+                "end": 26.535,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "other",
+                "start": 26.535,
+                "end": 27.494999,
+                "confidence": 0.7792969,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "meetings",
+                "start": 27.494999,
+                "end": 27.974998,
+                "confidence": 0.9995117,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "then",
+                "start": 32.09,
+                "end": 32.41,
+                "confidence": 0.9921875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we've",
+                "start": 32.41,
+                "end": 32.649998,
+                "confidence": 0.9995117,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "got",
+                "start": 32.649998,
+                "end": 32.809998,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "our",
+                "start": 32.809998,
+                "end": 33.05,
+                "confidence": 0.99609375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "first",
+                "start": 33.05,
+                "end": 33.45,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "tool",
+                "start": 33.45,
+                "end": 33.69,
+                "confidence": 0.9819336,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "training",
+                "start": 33.69,
+                "end": 34.489998,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we're",
+                "start": 35.129997,
+                "end": 35.53,
+                "confidence": 0.78271484,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "going",
+                "start": 35.53,
+                "end": 35.69,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 35.69,
+                "end": 35.85,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "work",
+                "start": 35.85,
+                "end": 36.01,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "with",
+                "start": 36.01,
+                "end": 36.17,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 36.17,
+                "end": 36.329998,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "lot",
+                "start": 36.329998,
+                "end": 36.489998,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "of",
+                "start": 36.489998,
+                "end": 36.649998,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "high-tech",
+                "start": 36.649998,
+                "end": 37.129997,
+                "confidence": 0.9973958,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "tools",
+                "start": 37.129997,
+                "end": 37.449997,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "here",
+                "start": 37.449997,
+                "end": 38.09,
+                "confidence": 0.7687988,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "so",
+                "start": 38.489998,
+                "end": 38.73,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it's",
+                "start": 38.73,
+                "end": 39.37,
+                "confidence": 0.9995117,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it's",
+                "start": 39.37,
+                "end": 39.77,
+                "confidence": 0.9946289,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "handy",
+                "start": 39.77,
+                "end": 40.09,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "if",
+                "start": 40.09,
+                "end": 40.25,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we",
+                "start": 40.25,
+                "end": 40.41,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "have",
+                "start": 40.41,
+                "end": 40.57,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 40.57,
+                "end": 40.73,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "little",
+                "start": 40.73,
+                "end": 40.89,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "bit",
+                "start": 40.89,
+                "end": 40.97,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "of",
+                "start": 40.97,
+                "end": 41.129997,
+                "confidence": 0.9873047,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "training",
+                "start": 41.129997,
+                "end": 41.449997,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "first",
+                "start": 41.449997,
+                "end": 41.85,
+                "confidence": 0.9995117,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "as",
+                "start": 42.545002,
+                "end": 42.785,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 42.785,
+                "end": 42.945,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "can",
+                "start": 42.945,
+                "end": 43.105,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "see",
+                "start": 43.105,
+                "end": 43.265,
+                "confidence": 0.984375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we've",
+                "start": 43.265,
+                "end": 43.585,
+                "confidence": 0.76953125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "got",
+                "start": 43.585,
+                "end": 43.745,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 43.745,
+                "end": 43.985,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "smart",
+                "start": 43.985,
+                "end": 44.385,
+                "confidence": 0.8642578,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "boards",
+                "start": 44.385,
+                "end": 45.105,
+                "confidence": 0.87060547,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "here",
+                "start": 45.105,
+                "end": 45.505,
+                "confidence": 0.9526367,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 45.505,
+                "end": 45.825,
+                "confidence": 0.9838867,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "here",
+                "start": 45.825,
+                "end": 46.305,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 46.305,
+                "end": 46.625,
+                "confidence": 0.74658203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 46.625,
+                "end": 46.785,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "whiteboard",
+                "start": 46.785,
+                "end": 47.585,
+                "confidence": 0.8487956,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "in",
+                "start": 50.545,
+                "end": 50.785,
+                "confidence": 0.9428711,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 50.785,
+                "end": 50.945,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "whiteboard",
+                "start": 50.945,
+                "end": 51.425,
+                "confidence": 0.9946289,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "here",
+                "start": 51.425,
+                "end": 52.065,
+                "confidence": 0.9655762,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "there's",
+                "start": 52.065,
+                "end": 52.225,
+                "confidence": 0.99316406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 52.225,
+                "end": 52.385002,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "little",
+                "start": 52.385002,
+                "end": 52.545,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "toolbar",
+                "start": 52.545,
+                "end": 53.504997,
+                "confidence": 0.97387695,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "on",
+                "start": 53.985,
+                "end": 54.305,
+                "confidence": 0.9536133,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "this",
+                "start": 54.305,
+                "end": 54.545,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "side",
+                "start": 54.545,
+                "end": 54.785,
+                "confidence": 0.9855957,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "here",
+                "start": 55.63,
+                "end": 55.95,
+                "confidence": 0.97998047,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "are",
+                "start": 55.95,
+                "end": 56.11,
+                "confidence": 0.9921875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "some",
+                "start": 56.11,
+                "end": 56.350002,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "functions",
+                "start": 56.350002,
+                "end": 56.83,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 56.83,
+                "end": 57.07,
+                "confidence": 0.5493164,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "can",
+                "start": 57.07,
+                "end": 57.23,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "save",
+                "start": 57.23,
+                "end": 57.95,
+                "confidence": 0.9748535,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "these",
+                "start": 57.95,
+                "end": 58.510002,
+                "confidence": 0.94189453,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "functions",
+                "start": 58.510002,
+                "end": 59.07,
+                "confidence": 0.7626953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we",
+                "start": 59.07,
+                "end": 59.15,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "don't",
+                "start": 59.15,
+                "end": 59.39,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "have",
+                "start": 59.39,
+                "end": 59.550003,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "anything",
+                "start": 59.550003,
+                "end": 60.030003,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 60.030003,
+                "end": 60.11,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "do",
+                "start": 60.11,
+                "end": 60.27,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "with",
+                "start": 60.27,
+                "end": 60.670002,
+                "confidence": 0.9602051,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "only",
+                "start": 60.670002,
+                "end": 60.99,
+                "confidence": 0.98291016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "undo",
+                "start": 60.99,
+                "end": 61.550003,
+                "confidence": 0.79589844,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 61.550003,
+                "end": 61.63,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "can",
+                "start": 61.63,
+                "end": 61.79,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "undo",
+                "start": 61.79,
+                "end": 62.11,
+                "confidence": 0.96777344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 62.11,
+                "end": 62.27,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "little",
+                "start": 62.27,
+                "end": 62.83,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "piece",
+                "start": 64.11,
+                "end": 64.43,
+                "confidence": 0.9526367,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "of",
+                "start": 64.43,
+                "end": 64.51,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "drawing",
+                "start": 64.51,
+                "end": 65.23,
+                "confidence": 0.8227539,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 65.55,
+                "end": 65.79,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "blank",
+                "start": 65.79,
+                "end": 66.11,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "new",
+                "start": 66.11,
+                "end": 66.35,
+                "confidence": 0.98291016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "document",
+                "start": 66.35,
+                "end": 66.75,
+                "confidence": 0.74658203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "for",
+                "start": 66.75,
+                "end": 67.15,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "each",
+                "start": 67.15,
+                "end": 67.47,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "person",
+                "start": 67.47,
+                "end": 67.87,
+                "confidence": 0.9638672,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "select",
+                "start": 69.244995,
+                "end": 69.645,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 69.645,
+                "end": 69.965,
+                "confidence": 0.9448242,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "pen",
+                "start": 69.965,
+                "end": 70.365,
+                "confidence": 0.96533203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "razor",
+                "start": 70.365,
+                "end": 71.244995,
+                "confidence": 0.8342285,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "capture",
+                "start": 71.405,
+                "end": 71.805,
+                "confidence": 0.69018555,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we",
+                "start": 71.805,
+                "end": 71.965,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "don't",
+                "start": 71.965,
+                "end": 72.125,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "have",
+                "start": 72.125,
+                "end": 72.365,
+                "confidence": 0.99609375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 72.365,
+                "end": 72.445,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "do",
+                "start": 72.445,
+                "end": 72.604996,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "anything",
+                "start": 72.604996,
+                "end": 72.924995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "with",
+                "start": 72.924995,
+                "end": 73.485,
+                "confidence": 0.9667969,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "then",
+                "start": 74.765,
+                "end": 75.405,
+                "confidence": 0.9892578,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we've",
+                "start": 75.965,
+                "end": 76.445,
+                "confidence": 0.99560547,
+                "speaker": 0,
+                "speaker_confidence": 0.9541055
+              },
+              {
+                "word": "got",
+                "start": 76.445,
+                "end": 76.685,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.94645643
+              },
+              {
+                "word": "our",
+                "start": 76.685,
+                "end": 76.924995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.94645643
+              },
+              {
+                "word": "pen",
+                "start": 76.924995,
+                "end": 77.645,
+                "confidence": 0.7805176,
+                "speaker": 0,
+                "speaker_confidence": 0.94645643
+              },
+              {
+                "word": "this",
+                "start": 78.685,
+                "end": 78.924995,
+                "confidence": 0.9941406,
+                "speaker": 0,
+                "speaker_confidence": 0.94645643
+              },
+              {
+                "word": "pen",
+                "start": 78.924995,
+                "end": 79.564995,
+                "confidence": 0.8120117,
+                "speaker": 0,
+                "speaker_confidence": 0.94645643
+              },
+              {
+                "word": "it's",
+                "start": 79.884995,
+                "end": 80.204994,
+                "confidence": 0.9921875,
+                "speaker": 0,
+                "speaker_confidence": 0.97858256
+              },
+              {
+                "word": "really",
+                "start": 80.204994,
+                "end": 80.365,
+                "confidence": 0.9941406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "funny",
+                "start": 80.365,
+                "end": 80.685,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "because",
+                "start": 80.685,
+                "end": 81.005,
+                "confidence": 0.9604492,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 81.005,
+                "end": 81.16499,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "can",
+                "start": 81.16499,
+                "end": 81.325,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "draw",
+                "start": 81.325,
+                "end": 81.485,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "with",
+                "start": 81.485,
+                "end": 81.725,
+                "confidence": 0.9941406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it",
+                "start": 81.725,
+                "end": 81.884995,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "on",
+                "start": 81.884995,
+                "end": 82.045,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "this",
+                "start": 82.045,
+                "end": 82.284996,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "page",
+                "start": 82.284996,
+                "end": 82.685,
+                "confidence": 0.9194336,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "in",
+                "start": 84.7,
+                "end": 84.939995,
+                "confidence": 0.8852539,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 84.939995,
+                "end": 85.49999,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "i",
+                "start": 86.299995,
+                "end": 86.53999,
+                "confidence": 0.9111328,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "think",
+                "start": 86.53999,
+                "end": 86.85999,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it",
+                "start": 86.85999,
+                "end": 87.1,
+                "confidence": 0.9838867,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "is",
+                "start": 87.1,
+                "end": 87.74,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "format",
+                "start": 88.14,
+                "end": 88.939995,
+                "confidence": 0.6750488,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 89.17999,
+                "end": 89.42,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "can",
+                "start": 89.42,
+                "end": 89.579994,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "also",
+                "start": 89.579994,
+                "end": 89.899994,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "select",
+                "start": 89.899994,
+                "end": 90.38,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 90.38,
+                "end": 90.619995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "current",
+                "start": 90.619995,
+                "end": 91.02,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "color",
+                "start": 91.02,
+                "end": 91.34,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 91.34,
+                "end": 91.579994,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 91.579994,
+                "end": 91.659996,
+                "confidence": 0.87890625,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "line",
+                "start": 91.659996,
+                "end": 91.899994,
+                "confidence": 0.9873047,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "width",
+                "start": 91.899994,
+                "end": 92.53999,
+                "confidence": 0.6965332,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "but",
+                "start": 93.02,
+                "end": 93.17999,
+                "confidence": 0.89501953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "then",
+                "start": 93.17999,
+                "end": 93.42,
+                "confidence": 0.70996094,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "first",
+                "start": 93.42,
+                "end": 93.74,
+                "confidence": 0.7895508,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "have",
+                "start": 93.74,
+                "end": 93.899994,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 93.899994,
+                "end": 94.06,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "select",
+                "start": 94.06,
+                "end": 94.619995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 94.619995,
+                "end": 94.85999,
+                "confidence": 0.9838867,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "pen",
+                "start": 94.85999,
+                "end": 95.17999,
+                "confidence": 0.9716797,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "function",
+                "start": 95.17999,
+                "end": 95.659996,
+                "confidence": 0.7426758,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "but",
+                "start": 96.595,
+                "end": 96.835,
+                "confidence": 0.54296875,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "we're",
+                "start": 96.835,
+                "end": 97.155,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "going",
+                "start": 97.155,
+                "end": 97.314995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "to",
+                "start": 97.314995,
+                "end": 97.795,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "work",
+                "start": 98.274994,
+                "end": 98.515,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "with",
+                "start": 98.515,
+                "end": 98.674995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "it",
+                "start": 98.674995,
+                "end": 98.835,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "in",
+                "start": 98.835,
+                "end": 99.075,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "a",
+                "start": 99.075,
+                "end": 99.235,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "minute",
+                "start": 99.235,
+                "end": 99.795,
+                "confidence": 0.99658203,
+                "speaker": 0,
+                "speaker_confidence": 0.9650227
+              },
+              {
+                "word": "so",
+                "start": 100.034996,
+                "end": 100.595,
+                "confidence": 0.89746094,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "okay",
+                "start": 100.595,
+                "end": 101.155,
+                "confidence": 0.99316406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "that's",
+                "start": 102.915,
+                "end": 103.314995,
+                "confidence": 0.89086914,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "very",
+                "start": 103.314995,
+                "end": 103.555,
+                "confidence": 0.97998047,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "simple",
+                "start": 103.555,
+                "end": 104.115,
+                "confidence": 0.91186523,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 104.115,
+                "end": 104.195,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it's",
+                "start": 104.195,
+                "end": 104.435,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "easy",
+                "start": 104.435,
+                "end": 104.755,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 104.755,
+                "end": 105.23499,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "draw",
+                "start": 105.235,
+                "end": 105.634995,
+                "confidence": 0.98828125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "your",
+                "start": 105.634995,
+                "end": 106.274994,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "findings",
+                "start": 106.835,
+                "end": 107.314995,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 107.314995,
+                "end": 107.715,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "drawings",
+                "start": 107.715,
+                "end": 108.354996,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "on",
+                "start": 108.354996,
+                "end": 108.595,
+                "confidence": 0.60595703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "there",
+                "start": 108.595,
+                "end": 109.155,
+                "confidence": 0.9975586,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "then",
+                "start": 110.274994,
+                "end": 111.155,
+                "confidence": 0.99609375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 112.3,
+                "end": 112.62,
+                "confidence": 0.94189453,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "short",
+                "start": 112.62,
+                "end": 113.420006,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "thing",
+                "start": 113.420006,
+                "end": 113.66,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "about",
+                "start": 113.66,
+                "end": 113.98,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "documents",
+                "start": 113.98,
+                "end": 114.78001,
+                "confidence": 0.8762207,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we've",
+                "start": 115.100006,
+                "end": 115.340004,
+                "confidence": 0.9904785,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "got",
+                "start": 115.340004,
+                "end": 115.5,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "our",
+                "start": 115.5,
+                "end": 115.740005,
+                "confidence": 0.9658203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "shared",
+                "start": 115.740005,
+                "end": 116.14001,
+                "confidence": 0.9760742,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "folder",
+                "start": 116.14001,
+                "end": 116.94,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "project",
+                "start": 117.020004,
+                "end": 117.5,
+                "confidence": 0.6323242,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "project",
+                "start": 117.5,
+                "end": 118.78001,
+                "confidence": 0.67041016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "what",
+                "start": 118.78001,
+                "end": 119.020004,
+                "confidence": 0.36523438,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "was",
+                "start": 119.020004,
+                "end": 119.18,
+                "confidence": 0.9536133,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it",
+                "start": 119.18,
+                "end": 119.420006,
+                "confidence": 0.9328613,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "project",
+                "start": 119.420006,
+                "end": 119.98,
+                "confidence": 0.984375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "documents",
+                "start": 119.98,
+                "end": 120.86,
+                "confidence": 0.58496094,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "i",
+                "start": 120.86,
+                "end": 121.26,
+                "confidence": 0.63378906,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "think",
+                "start": 121.740005,
+                "end": 122.3,
+                "confidence": 0.89697266,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "but",
+                "start": 122.700005,
+                "end": 123.020004,
+                "confidence": 0.9350586,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 123.020004,
+                "end": 123.420006,
+                "confidence": 0.69384766,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "will",
+                "start": 123.420006,
+                "end": 123.740005,
+                "confidence": 0.7421875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "found",
+                "start": 123.740005,
+                "end": 124.060005,
+                "confidence": 0.72265625,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "that",
+                "start": 124.060005,
+                "end": 124.22,
+                "confidence": 0.7939453,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "already",
+                "start": 124.22,
+                "end": 124.700005,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "because",
+                "start": 124.700005,
+                "end": 125.020004,
+                "confidence": 0.921875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "there",
+                "start": 125.020004,
+                "end": 125.26,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "are",
+                "start": 125.26,
+                "end": 125.340004,
+                "confidence": 0.98828125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 125.340004,
+                "end": 125.5,
+                "confidence": 0.9902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "lot",
+                "start": 125.5,
+                "end": 125.58,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "of",
+                "start": 125.58,
+                "end": 125.66,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "documents",
+                "start": 125.66,
+                "end": 125.98,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "in",
+                "start": 125.98,
+                "end": 126.14,
+                "confidence": 0.96972656,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it",
+                "start": 126.14,
+                "end": 126.3,
+                "confidence": 0.9921875,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "already",
+                "start": 126.3,
+                "end": 126.700005,
+                "confidence": 0.8779297,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "so",
+                "start": 126.700005,
+                "end": 126.78001,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "that",
+                "start": 126.78001,
+                "end": 127.5,
+                "confidence": 0.5751953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "will",
+                "start": 126.975,
+                "end": 127.295,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "be",
+                "start": 127.295,
+                "end": 127.455,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "okay",
+                "start": 127.455,
+                "end": 128.015,
+                "confidence": 0.9904785,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 128.975,
+                "end": 129.77501,
+                "confidence": 0.96533203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "these",
+                "start": 130.255,
+                "end": 130.575,
+                "confidence": 0.99609375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "are",
+                "start": 130.575,
+                "end": 130.735,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "available",
+                "start": 130.735,
+                "end": 131.135,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "on",
+                "start": 131.135,
+                "end": 131.295,
+                "confidence": 0.9448242,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 131.295,
+                "end": 131.455,
+                "confidence": 0.99316406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "smart",
+                "start": 131.455,
+                "end": 131.69499,
+                "confidence": 0.62353516,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "boards",
+                "start": 131.69499,
+                "end": 131.935,
+                "confidence": 0.8354492,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "as",
+                "start": 131.935,
+                "end": 132.175,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "well",
+                "start": 132.175,
+                "end": 132.655,
+                "confidence": 0.9692383,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "so",
+                "start": 132.815,
+                "end": 133.055,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "if",
+                "start": 133.055,
+                "end": 133.295,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 133.295,
+                "end": 133.455,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "have",
+                "start": 133.455,
+                "end": 133.535,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 133.535,
+                "end": 133.69499,
+                "confidence": 0.99316406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "document",
+                "start": 133.69499,
+                "end": 134.015,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 134.015,
+                "end": 134.175,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "wanna",
+                "start": 134.175,
+                "end": 134.33499,
+                "confidence": 0.8828125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "show",
+                "start": 134.33499,
+                "end": 134.975,
+                "confidence": 0.98950195,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "just",
+                "start": 135.295,
+                "end": 135.61499,
+                "confidence": 0.9873047,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "open",
+                "start": 135.61499,
+                "end": 136.015,
+                "confidence": 0.97265625,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it",
+                "start": 136.015,
+                "end": 136.095,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "from",
+                "start": 136.095,
+                "end": 136.33499,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 136.33499,
+                "end": 136.495,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "folder",
+                "start": 136.495,
+                "end": 136.815,
+                "confidence": 0.99658203,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "here",
+                "start": 139.31001,
+                "end": 139.55,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "is",
+                "start": 139.55,
+                "end": 139.71,
+                "confidence": 0.50097656,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "a",
+                "start": 139.71,
+                "end": 139.87001,
+                "confidence": 0.5805664,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "simple",
+                "start": 139.87001,
+                "end": 140.19,
+                "confidence": 0.9941406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "toolbar",
+                "start": 140.19,
+                "end": 140.91,
+                "confidence": 0.961263,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it's",
+                "start": 140.91,
+                "end": 141.23001,
+                "confidence": 0.70703125,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "what",
+                "start": 141.23001,
+                "end": 141.39,
+                "confidence": 0.9633789,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "i",
+                "start": 141.39,
+                "end": 141.55,
+                "confidence": 0.95166016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "just",
+                "start": 141.55,
+                "end": 141.71,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "said",
+                "start": 141.71,
+                "end": 142.03,
+                "confidence": 0.8251953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "it's",
+                "start": 142.03,
+                "end": 142.27,
+                "confidence": 0.83251953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "safe",
+                "start": 142.27,
+                "end": 142.83,
+                "confidence": 0.7285156,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "print",
+                "start": 142.83,
+                "end": 143.55002,
+                "confidence": 0.98291016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "move",
+                "start": 144.19,
+                "end": 144.67,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "back",
+                "start": 144.67,
+                "end": 145.15001,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "or",
+                "start": 145.15001,
+                "end": 145.47,
+                "confidence": 0.8984375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "forward",
+                "start": 145.47,
+                "end": 146.03,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "one",
+                "start": 146.03,
+                "end": 146.35,
+                "confidence": 0.9790039,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "page",
+                "start": 146.35,
+                "end": 146.99,
+                "confidence": 0.98291016,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "you",
+                "start": 147.39,
+                "end": 147.63,
+                "confidence": 0.9223633,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "can",
+                "start": 147.63,
+                "end": 147.79001,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "switch",
+                "start": 147.79001,
+                "end": 148.11,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "between",
+                "start": 148.11,
+                "end": 148.43001,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 148.43001,
+                "end": 148.67,
+                "confidence": 0.9604492,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "different",
+                "start": 148.67,
+                "end": 148.99,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "drawings",
+                "start": 148.99,
+                "end": 149.47,
+                "confidence": 0.9650879,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 152.60501,
+                "end": 152.925,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "then",
+                "start": 152.925,
+                "end": 153.085,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "we're",
+                "start": 153.085,
+                "end": 153.405,
+                "confidence": 0.9970703,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "going",
+                "start": 153.405,
+                "end": 153.565,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "to",
+                "start": 153.565,
+                "end": 153.645,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "try",
+                "start": 153.645,
+                "end": 153.96501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "out",
+                "start": 153.96501,
+                "end": 154.205,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "the",
+                "start": 154.205,
+                "end": 154.365,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "whiteboard",
+                "start": 154.365,
+                "end": 155.24501,
+                "confidence": 0.9824219,
+                "speaker": 0,
+                "speaker_confidence": 0.95044357
+              },
+              {
+                "word": "so",
+                "start": 156.845,
+                "end": 157.32501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "as",
+                "start": 157.32501,
+                "end": 157.645,
+                "confidence": 0.9536133,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "you",
+                "start": 157.645,
+                "end": 157.80501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "can",
+                "start": 157.80501,
+                "end": 157.96501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "see",
+                "start": 157.96501,
+                "end": 158.285,
+                "confidence": 0.99658203,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "we're",
+                "start": 158.285,
+                "end": 158.52501,
+                "confidence": 0.8178711,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "go",
+                "start": 158.52501,
+                "end": 158.845,
+                "confidence": 0.71777344,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "going",
+                "start": 158.845,
+                "end": 159.405,
+                "confidence": 0.71728516,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "to",
+                "start": 159.405,
+                "end": 159.485,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "draw",
+                "start": 159.485,
+                "end": 159.725,
+                "confidence": 0.9951172,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "an",
+                "start": 159.725,
+                "end": 159.88501,
+                "confidence": 0.86621094,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "animal",
+                "start": 159.88501,
+                "end": 160.60501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "just",
+                "start": 161.16501,
+                "end": 161.565,
+                "confidence": 0.9526367,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "to",
+                "start": 161.565,
+                "end": 162.12502,
+                "confidence": 0.8798828,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "yeah",
+                "start": 163.32501,
+                "end": 163.645,
+                "confidence": 0.90405273,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "just",
+                "start": 163.645,
+                "end": 163.88501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.96713763
+              },
+              {
+                "word": "to",
+                "start": 163.88501,
+                "end": 164.125,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.90313256
+              },
+              {
+                "word": "get",
+                "start": 164.125,
+                "end": 164.365,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.8391275
+              },
+              {
+                "word": "a",
+                "start": 164.365,
+                "end": 164.445,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.8391275
+              },
+              {
+                "word": "bit",
+                "start": 164.445,
+                "end": 164.60501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.8391275
+              },
+              {
+                "word": "familiar",
+                "start": 164.60501,
+                "end": 164.925,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.8391275
+              },
+              {
+                "word": "with",
+                "start": 164.925,
+                "end": 165.24501,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 0.8391275
+              },
+              {
+                "word": "it",
+                "start": 165.24501,
+                "end": 165.405,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 0.8391275
+              },
+              {
+                "word": "mouse",
+                "start": 167.86,
+                "end": 168.18,
+                "confidence": 0.88964844,
+                "speaker": 0,
+                "speaker_confidence": 0.71443176
+              },
+              {
+                "word": "wasn't",
+                "start": 168.18,
+                "end": 168.58,
+                "confidence": 0.94750977,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "running",
+                "start": 168.58,
+                "end": 168.9,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "away",
+                "start": 168.9,
+                "end": 169.3,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 0.9998639
+              },
+              {
+                "word": "that's",
+                "start": 169.3,
+                "end": 169.62,
+                "confidence": 0.4255371,
+                "speaker": 1,
+                "speaker_confidence": 0.9991835
+              },
+              {
+                "word": "interesting",
+                "start": 169.62,
+                "end": 170.34,
+                "confidence": 0.9980469,
+                "speaker": 1,
+                "speaker_confidence": 0.9991835
+              },
+              {
+                "word": "is",
+                "start": 171.14,
+                "end": 171.37999,
+                "confidence": 0.52246094,
+                "speaker": 0,
+                "speaker_confidence": 0.99959177
+              },
+              {
+                "word": "everybody",
+                "start": 171.37999,
+                "end": 172.01999,
+                "confidence": 0.9941406,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "is",
+                "start": 172.01999,
+                "end": 172.26,
+                "confidence": 0.9902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "anybody",
+                "start": 172.26,
+                "end": 172.58,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "playing",
+                "start": 172.58,
+                "end": 172.9,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "with",
+                "start": 172.9,
+                "end": 173.06,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "the",
+                "start": 173.06,
+                "end": 173.22,
+                "confidence": 0.92822266,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "mouse",
+                "start": 173.22,
+                "end": 173.62,
+                "confidence": 0.9819336,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "no",
+                "start": 173.62,
+                "end": 173.86,
+                "confidence": 0.67626953,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "okay",
+                "start": 173.86,
+                "end": 174.66,
+                "confidence": 0.99609375,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "we're",
+                "start": 175.06,
+                "end": 175.54,
+                "confidence": 0.87353516,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "going",
+                "start": 175.54,
+                "end": 175.78,
+                "confidence": 0.9902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "to",
+                "start": 175.78,
+                "end": 176.09999,
+                "confidence": 0.8017578,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "draw",
+                "start": 176.34,
+                "end": 176.73999,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "an",
+                "start": 176.73999,
+                "end": 176.9,
+                "confidence": 0.40405273,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "animal",
+                "start": 176.9,
+                "end": 177.54001,
+                "confidence": 0.9243164,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "and",
+                "start": 178.34,
+                "end": 178.9,
+                "confidence": 0.626709,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              },
+              {
+                "word": "just",
+                "start": 179.54,
+                "end": 179.86,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

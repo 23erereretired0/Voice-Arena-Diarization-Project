@@ -1,0 +1,3 @@
+File	DER	JER	B3-Precision	B3-Recall	B3-F1	GKT(ref, sys)	GKT(sys, ref)	H(ref|sys)	H(sys|ref)	MI	NMI
+rec1	19.6429	27.1000	0.81	0.90	0.85	0.88	0.80	0.40	0.20	1.50	0.85
+*** OVERALL ***	19.6429	27.1000	0.81	0.90	0.85	0.88	0.80	0.40	0.20	1.50	0.85

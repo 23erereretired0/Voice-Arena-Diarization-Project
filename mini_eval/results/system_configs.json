@@ -1,0 +1,478 @@
+{
+  "generated_utc": "2026-10-18T20:59:47+00:00",
+  "measured_results_present": true,
+  "scoring": {
+    "collar_s": 0.0,
+    "overlap": "included",
+    "uem": "full excerpt [0, duration]",
+    "failure_policy": "failed/invalid/empty -> empty hypothesis",
+    "normalization": "same-speaker overlapping segments merged"
+  },
+  "scorer": {
+    "name": "dscore",
+    "commit": "e02f949ac6592279300a2c33d03daf9e0c12fd27",
+    "components_from": "scorelib/md-eval-22.pl (bundled)",
+    "python": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\.venv-scorer\\Scripts\\python.exe"
+  },
+  "recordings_config": "configs/recordings.json",
+  "environment": {
+    "sandbox_this_submission": {
+      "captured_utc": "2026-10-14T21:14:51+00:00",
+      "os": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "python_executable": "/usr/bin/python3",
+      "cpu": "x86_64",
+      "gpu": "none detected",
+      "packages": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.1",
+        "pandas": "3.0.2",
+        "requests": "2.33.1",
+        "torch": "not installed",
+        "torchaudio": "not installed",
+        "pyannote.audio": "not installed",
+        "pyannote.core": "not installed",
+        "pyannote.metrics": "not installed",
+        "nemo": "not installed",
+        "omegaconf": "not installed",
+        "huggingface_hub": "not installed",
+        "intervaltree": "not installed",
+        "tabulate": "0.10.0"
+      },
+      "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+      "perl": "v5.38.2",
+      "dscore_commit": "dscore not cloned"
+    },
+    "sandbox_2026-10-18": {
+      "captured_utc": "2026-10-18T15:18:17+00:00",
+      "os": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+      "python": "3.12.3",
+      "python_executable": "/usr/bin/python3",
+      "cpu": "x86_64",
+      "gpu": "none detected",
+      "packages": {
+        "numpy": "2.4.4",
+        "scipy": "1.17.1",
+        "pandas": "3.0.2",
+        "requests": "2.33.1",
+        "torch": "not installed",
+        "torchaudio": "not installed",
+        "pyannote.audio": "not installed",
+        "pyannote.core": "not installed",
+        "pyannote.metrics": "not installed",
+        "nemo": "not installed",
+        "omegaconf": "not installed",
+        "huggingface_hub": "not installed",
+        "intervaltree": "not installed",
+        "tabulate": "0.10.0"
+      },
+      "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+      "perl": "v5.38.2",
+      "dscore_commit": "dscore not cloned"
+    },
+    "windows": {
+      "captured_utc": "2026-10-18T19:28:20+00:00",
+      "os": "Windows-10-10.0.26100-SP0",
+      "python": "3.11.9",
+      "python_executable": "C:\\Users\\asaru\\voice-arena-project\\voice-arena\\mini_eval\\.venv\\Scripts\\python.exe",
+      "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 566.07",
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "not installed",
+        "pandas": "not installed",
+        "requests": "2.34.2",
+        "torch": "not installed",
+        "torchaudio": "not installed",
+        "pyannote.audio": "not installed",
+        "pyannote.core": "not installed",
+        "pyannote.metrics": "not installed",
+        "nemo": "not installed",
+        "omegaconf": "not installed",
+        "huggingface_hub": "not installed",
+        "intervaltree": "not installed",
+        "tabulate": "not installed"
+      },
+      "ffmpeg": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+      "perl": "v5.42.3",
+      "dscore_commit": "e02f949ac6592279300a2c33d03daf9e0c12fd27"
+    }
+  },
+  "systems": [
+    {
+      "declaration": {
+        "system_id": "pyannote-community-1",
+        "display_name": "pyannote speaker-diarization-community-1",
+        "company": "pyannoteAI (open-source pipeline)",
+        "model_identifier": "pyannote/speaker-diarization-community-1",
+        "model_revision": "RECORD_AT_RUNTIME (Hugging Face commit sha or local clone git sha)",
+        "package": "pyannote.audio 4.x (exact version RECORD_AT_RUNTIME)",
+        "deployment": "open-source, self-hosted",
+        "mode": "batch",
+        "track": "audio_only_batch",
+        "speaker_count_condition": "unknown",
+        "overlap_capable": true,
+        "output_granularity": "segment-level (speaker_diarization; exclusive variant not used for scoring)",
+        "prediction_dir": "predictions/pyannote-community-1",
+        "runner": "scripts/run_pyannote.py",
+        "settings": {
+          "num_speakers": null,
+          "min_speakers": null,
+          "max_speakers": null,
+          "device": "cuda if available else cpu"
+        }
+      },
+      "run_status": {
+        "system_id": "pyannote-community-1",
+        "runner": "run_pyannote.py",
+        "track": "audio_only_batch",
+        "speaker_count_condition": "unknown",
+        "model_identifier": "pyannote/speaker-diarization-community-1",
+        "model_revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+        "package_versions": {
+          "pyannote.audio": "4.0.7",
+          "torch": "2.14.1+cpu",
+          "python": "3.11.9"
+        },
+        "hardware": {
+          "device": "cpu",
+          "gpu": null,
+          "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+          "os": "Windows-10-10.0.26100-SP0"
+        },
+        "settings": {
+          "num_speakers": null,
+          "min_speakers": null,
+          "max_speakers": null,
+          "scored_output": "speaker_diarization (overlap-aware)",
+          "exclusive_output_used": false
+        },
+        "model_load_seconds": 2.231,
+        "warmup_seconds": 0.052,
+        "run_started_utc": "2026-10-18T20:00:18+00:00",
+        "run_finished_utc": "2026-10-18T20:12:00+00:00",
+        "blocked_reason": null,
+        "recordings": [
+          {
+            "recording_id": "ami_ES2004a_ihm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 135.744,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T20:00:21+00:00",
+            "finished_utc": "2026-10-18T20:02:37+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 3
+            },
+            "rtf": 0.7541333333333333
+          },
+          {
+            "recording_id": "ami_ES2004a_sdm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 134.828,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T20:02:37+00:00",
+            "finished_utc": "2026-10-18T20:04:51+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 3
+            },
+            "rtf": 0.7490444444444445
+          },
+          {
+            "recording_id": "ami_IS1009a_sdm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 139.796,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T20:04:51+00:00",
+            "finished_utc": "2026-10-18T20:07:11+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 4
+            },
+            "rtf": 0.7766444444444444
+          },
+          {
+            "recording_id": "ami_TS3003a_ihm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 147.521,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T20:07:11+00:00",
+            "finished_utc": "2026-10-18T20:09:39+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 1
+            },
+            "rtf": 0.8195611111111111
+          },
+          {
+            "recording_id": "ami_EN2002a_sdm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 141.738,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T20:09:39+00:00",
+            "finished_utc": "2026-10-18T20:12:00+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 4
+            },
+            "rtf": 0.7874333333333333
+          }
+        ]
+      }
+    },
+    {
+      "declaration": {
+        "system_id": "nemo-msdd",
+        "display_name": "NVIDIA NeMo MSDD (TitaNet-L embeddings, MarbleNet VAD)",
+        "company": "NVIDIA",
+        "model_identifier": "NeMo NeuralDiarizer with diar_msdd_telephonic + titanet_large + vad_multilingual_marblenet",
+        "model_revision": "RECORD_AT_RUNTIME (nemo_toolkit version; resolved YAML saved to results/configs/)",
+        "package": "nemo_toolkit[asr] (exact version RECORD_AT_RUNTIME; pinned container recommended)",
+        "deployment": "open-source, self-hosted",
+        "mode": "batch",
+        "track": "audio_only_batch",
+        "speaker_count_condition": "unknown (oracle_num_speakers=false)",
+        "overlap_capable": true,
+        "output_granularity": "segment-level",
+        "prediction_dir": "predictions/nemo-msdd",
+        "runner": "scripts/run_nemo_msdd.py",
+        "settings": {
+          "base_config": "diar_infer_meeting.yaml from the pinned NeMo tag",
+          "oracle_vad": false,
+          "oracle_num_speakers": false,
+          "max_num_speakers": 8
+        }
+      },
+      "run_status": {
+        "system_id": "nemo-msdd",
+        "runner": "run_nemo_msdd.py",
+        "track": "audio_only_batch",
+        "speaker_count_condition": "unknown (oracle_num_speakers=false)",
+        "model_identifier": "NeMo NeuralDiarizer (MSDD) + titanet_large + vad_multilingual_marblenet",
+        "model_revision": null,
+        "package_versions": {},
+        "hardware": {},
+        "settings": {},
+        "model_load_seconds": null,
+        "warmup_seconds": null,
+        "run_started_utc": "2026-10-18T20:59:47+00:00",
+        "run_finished_utc": "2026-10-18T20:59:47+00:00",
+        "blocked_reason": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+        "recordings": [
+          {
+            "recording_id": "ami_ES2004a_ihm_0300_0480",
+            "status": "not_run",
+            "processing_seconds": null,
+            "audio_seconds": 180.0,
+            "started_utc": null,
+            "finished_utc": null,
+            "attempts": 0,
+            "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+            "notes": null,
+            "extra": {},
+            "rtf": null
+          },
+          {
+            "recording_id": "ami_ES2004a_sdm_0300_0480",
+            "status": "not_run",
+            "processing_seconds": null,
+            "audio_seconds": 180.0,
+            "started_utc": null,
+            "finished_utc": null,
+            "attempts": 0,
+            "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+            "notes": null,
+            "extra": {},
+            "rtf": null
+          },
+          {
+            "recording_id": "ami_IS1009a_sdm_0300_0480",
+            "status": "not_run",
+            "processing_seconds": null,
+            "audio_seconds": 180.0,
+            "started_utc": null,
+            "finished_utc": null,
+            "attempts": 0,
+            "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+            "notes": null,
+            "extra": {},
+            "rtf": null
+          },
+          {
+            "recording_id": "ami_TS3003a_ihm_0300_0480",
+            "status": "not_run",
+            "processing_seconds": null,
+            "audio_seconds": 180.0,
+            "started_utc": null,
+            "finished_utc": null,
+            "attempts": 0,
+            "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+            "notes": null,
+            "extra": {},
+            "rtf": null
+          },
+          {
+            "recording_id": "ami_EN2002a_sdm_0300_0480",
+            "status": "not_run",
+            "processing_seconds": null,
+            "audio_seconds": 180.0,
+            "started_utc": null,
+            "finished_utc": null,
+            "attempts": 0,
+            "error": "Not attempted on the evaluation machine (Windows 11, 2026-10-18): nemo_toolkit was not installed. NeMo is supported on Linux/WSL2, ideally with the NVIDIA NeMo container; the assignment required two systems.",
+            "notes": null,
+            "extra": {},
+            "rtf": null
+          }
+        ]
+      }
+    },
+    {
+      "declaration": {
+        "system_id": "api-system",
+        "display_name": "Commercial API (provider chosen at run time)",
+        "company": "RECORD_AT_RUNTIME (Deepgram | AssemblyAI | pyannoteAI)",
+        "model_identifier": "RECORD_AT_RUNTIME (e.g. deepgram nova-3 + diarize_model=v2; assemblyai speaker_labels; pyannoteai precision-3)",
+        "model_revision": "RECORD_AT_RUNTIME from response metadata (e.g. Deepgram diarize_info.model_uuid)",
+        "package": "HTTP API via requests",
+        "deployment": "commercial API",
+        "mode": "batch",
+        "track": "audio_only_batch",
+        "speaker_count_condition": "unknown (no speaker-count parameters sent)",
+        "overlap_capable": "provider-dependent (word-level STT labels cannot express overlap)",
+        "output_granularity": "provider-dependent",
+        "prediction_dir": "predictions/api-system",
+        "runner": "scripts/run_api.py",
+        "settings": {
+          "word_merge_gap_s": 0.2,
+          "timeout_s": 900,
+          "max_attempts": 3,
+          "language_hint": "en (same for every STT-based API; not a speaker-count hint)"
+        }
+      },
+      "run_status": {
+        "system_id": "api-system",
+        "runner": "run_api.py --provider deepgram",
+        "track": "audio_only_batch",
+        "speaker_count_condition": "unknown (no speaker-count parameters sent)",
+        "model_identifier": "Deepgram: nova-3 + diarize_model=v2",
+        "model_revision": "{\"ami_ES2004a_ihm_0300_0480\": {\"request_id\": \"01a1508c-368f-7d20-adac-6db5cb340dc8\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_ES2004a_sdm_0300_0480\": {\"request_id\": \"01a1508c-47e6-7772-993a-ce5e965d8ba8\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_IS1009a_sdm_0300_0480\": {\"request_id\": \"01a1508c-5948-7f53-a489-227456e5bb65\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_TS3003a_ihm_0300_0480\": {\"request_id\": \"01a1508c-68da-78f1-9b24-add0b5766c17\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}, \"ami_EN2002a_sdm_0300_0480\": {\"request_id\": \"01a1508c-7831-7c02-8ac3-f91e2e571a10\", \"model_info\": {\"2187e11a-3532-4498-b076-81fa530bdd49\": {\"name\": \"general-nova-3\", \"version\": \"2025-07-31.0\", \"arch\": \"nova-3\"}}, \"diarize_info\": {\"model_uuid\": \"6946b038-8264-4505-acf7-9822c009fecb\", \"arch\": \"v2\"}, \"params\": {\"model\": \"nova-3\", \"diarize_model\": \"v2\", \"language\": \"en\", \"punctuate\": \"false\", \"utterances\": \"false\"}}}",
+        "package_versions": {
+          "requests": "2.34.2",
+          "python": "3.11.9"
+        },
+        "hardware": {
+          "type": "remote API",
+          "region": "provider default",
+          "client_os": "Windows-10-10.0.26100-SP0"
+        },
+        "settings": {
+          "provider": "deepgram",
+          "timeout_s": 900.0,
+          "max_attempts": 3,
+          "word_merge_gap_s": 0.2,
+          "output_granularity": "word-level",
+          "overlap_capable": false,
+          "timing": "end-to-end wall clock incl. upload, queueing, polling and network",
+          "deepgram_model": "nova-3",
+          "deepgram_diarizer": "v2",
+          "pyannoteai_model": "precision-3",
+          "notes": "verify endpoint shapes against provider docs on the run date"
+        },
+        "model_load_seconds": null,
+        "warmup_seconds": null,
+        "run_started_utc": "2026-10-18T19:45:27+00:00",
+        "run_finished_utc": "2026-10-18T19:45:48+00:00",
+        "blocked_reason": null,
+        "recordings": [
+          {
+            "recording_id": "ami_ES2004a_ihm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 5.618,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T19:45:27+00:00",
+            "finished_utc": "2026-10-18T19:45:32+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 3
+            },
+            "rtf": 0.031211111111111113
+          },
+          {
+            "recording_id": "ami_ES2004a_sdm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 4.345,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T19:45:32+00:00",
+            "finished_utc": "2026-10-18T19:45:37+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 2
+            },
+            "rtf": 0.024138888888888887
+          },
+          {
+            "recording_id": "ami_IS1009a_sdm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 4.078,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T19:45:37+00:00",
+            "finished_utc": "2026-10-18T19:45:41+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 3
+            },
+            "rtf": 0.022655555555555557
+          },
+          {
+            "recording_id": "ami_TS3003a_ihm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 3.924,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T19:45:41+00:00",
+            "finished_utc": "2026-10-18T19:45:45+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 2
+            },
+            "rtf": 0.0218
+          },
+          {
+            "recording_id": "ami_EN2002a_sdm_0300_0480",
+            "status": "ok",
+            "processing_seconds": 3.777,
+            "audio_seconds": 180.0,
+            "started_utc": "2026-10-18T19:45:45+00:00",
+            "finished_utc": "2026-10-18T19:45:48+00:00",
+            "attempts": 1,
+            "error": null,
+            "notes": null,
+            "extra": {
+              "n_predicted_speakers": 4
+            },
+            "rtf": 0.020983333333333333
+          }
+        ]
+      }
+    }
+  ]
+}
